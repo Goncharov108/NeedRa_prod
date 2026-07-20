@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="landing-styles.css?v=no-horizon" />
   <link rel="stylesheet" href="landing-hero-v3.1.css?v=d5-baked-cards" />
-  <link rel="stylesheet" href="landing-v3.css?v=no-dividers" />
+  <link rel="stylesheet" href="landing-v3.css?v=consent-links" />
 </head>
 <body class="hero-v31-page landing-v3">
   <div class="lv3-ambient" aria-hidden="true">
@@ -461,11 +461,11 @@
           </label>
           <label class="field field-check">
             <input type="checkbox" name="consent" id="signupConsent" required data-od-id="signup-consent" />
-            <span>Согласие на обработку персональных данных <abbr title="обязательно">*</abbr> — <span class="field-todo">политика скоро</span></span>
+            <span>Я даю <a href="/legal/personal-data-consent.html" target="_blank" rel="noopener">согласие</a> на обработку персональных данных, включая трансграничную передачу для ИИ-агента. Ознакомлен(а) с <a href="/legal/privacy-policy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a> и <a href="/legal/terms-of-service.html" target="_blank" rel="noopener">Пользовательским соглашением</a> <abbr title="обязательно">*</abbr></span>
           </label>
           <button type="submit" class="btn btn-service btn-service--primary btn-lg signup-submit" data-od-id="signup-submit">Зарегистрироваться и загрузить данные →</button>
         </form>
-        <p class="signup-note" data-od-id="signup-note">Ежедневное обновление — 5 000 ₽/мес · свой агент · один сервис вместо пятидесяти</p>
+        <p class="signup-note" data-od-id="signup-note">Ежедневное обновление — 5 000 ₽/мес · свой агент · один сервис вместо множества</p>
         <p class="signup-fallback" data-od-id="signup-fallback">Уже есть аккаунт → <a href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">lk.needra.ru</a></p>
         </div>
       </div>
@@ -510,7 +510,12 @@
   <footer class="footer" data-od-id="site-footer">
     <div class="grid-12 footer-inner">
       <span class="col-span-4">© NeedRa</span>
-      <a class="col-span-4" href="#">Политика конфиденциальности</a>
+      <div class="col-span-4 footer-legal">
+        <a href="/legal/privacy-policy.html">Конфиденциальность</a>
+        <a href="/legal/terms-of-service.html">Соглашение</a>
+        <a href="/legal/public-offer.html">Оферта</a>
+        <a href="/legal/cookie-policy.html">Cookie</a>
+      </div>
       <div class="col-span-4 footer-contacts">
         <a class="footer-tg" href="https://t.me/GoncharovD" target="_blank" rel="noopener noreferrer" data-od-id="footer-tg" aria-label="Свяжитесь с нами в Telegram">
           <span class="footer-tg-label">Свяжитесь с нами</span>
