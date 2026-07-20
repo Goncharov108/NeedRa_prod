@@ -1,0 +1,17 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.env.*
+.venv-cards
+*.pem
+*.key
+id_rsa
+id_ed25519
+.ssh/
+test-results/
+playwright-report/
+backup/
+backup-pre-perf/
+.cursor/

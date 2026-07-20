@@ -1,0 +1,17 @@
+{
+  "name": "needra-landing",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "bash scripts/deploy.sh",
+    "test:perf": "playwright test tests/landing-v3-perf.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "vite": "^6.3.5"
+  }
+}
