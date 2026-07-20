@@ -90,10 +90,7 @@ body.landing-v3 .below-section--muted,
 body.landing-v3 .below-section--signup,
 body.landing-v3 .footer {
   background: transparent;
-}
-
-body.landing-v3 #essence {
-  border-top-color: transparent;
+  border-top: none;
 }
 
 /*
@@ -172,9 +169,24 @@ body.landing-v3 .relief-split.is-relief-busy .chaos-xl-error {
 }
 
 body.landing-v3 .footer-tg {
+  display: inline-flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
+  white-space: nowrap;
+}
+
+body.landing-v3 .footer-tg-label {
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  body.landing-v3 .footer-tg {
+    align-items: center;
+  }
 }
 
 body.landing-v3 main,
