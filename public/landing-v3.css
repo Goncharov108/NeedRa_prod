@@ -146,6 +146,37 @@ body.landing-v3 .beat-progress {
   z-index: 150;
 }
 
+/* ── Relief: мягкий отклик слайдера (визуал окон не меняем) ── */
+
+body.landing-v3 .relief-chaos {
+  opacity: var(--chaos-fade, 1);
+}
+
+body.landing-v3 .relief-split.is-dragging .relief-chaos,
+body.landing-v3 .relief-split.is-dragging .relief-order,
+body.landing-v3 .relief-split.is-dragging .relief-divider {
+  transition: none;
+}
+
+body.landing-v3 .relief-split.is-settling .relief-chaos,
+body.landing-v3 .relief-split.is-settling .relief-order,
+body.landing-v3 .relief-split.is-settling .relief-divider {
+  transition:
+    clip-path 0.14s ease-out,
+    left 0.14s ease-out,
+    opacity 0.14s ease-out;
+}
+
+body.landing-v3 .relief-split.is-relief-busy .chaos-xl-error {
+  animation-play-state: paused;
+}
+
+body.landing-v3 .footer-tg {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
 body.landing-v3 main,
 body.landing-v3 .footer {
   position: relative;
