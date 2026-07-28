@@ -15,3 +15,28 @@ playwright-report/
 backup/
 backup-pre-perf/
 .cursor/
+
+# Исходники дизайна / тяжёлые черновики (не прод)
+design/
+
+# Черновики hero и лабораторные страницы в корне
+hero-v2.html
+hero-v3*.html
+ads-cards.html
+finance-cards.html
+orbit-chips.html
+index.v1.html
+
+# Лаборатория в public/ — не канон лендинга, не в git и режется из dist
+public/index.v1.html
+public/noise-to-chat.html
+public/ads-cards.*
+public/finance-cards.*
+public/orbit-chips-*
+public/landing-hero-v2-*
+public/landing-hero-blackhole.js
+public/landing-hero-orbit-canvas.js
+public/landing-hero-widgets.js
+public/landing-main.js
+public/landing-hero-v3.1-main.js
+public/assets/hero-v3/cards-muted/

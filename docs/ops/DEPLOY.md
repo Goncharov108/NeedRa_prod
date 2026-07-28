@@ -53,7 +53,8 @@ curl -sI https://needra.ru/ | head -10
 
 ## Что попадает на прод
 
-- Всё содержимое `dist/` после `vite build` (HTML, CSS, JS, `public/` → assets, legal и т.д.).
+- Содержимое `dist/` после `vite build` **и** `scripts/prune-dist.mjs`
+  (лабораторные hero-v2/orbit/ads и дубликаты `cards-muted` с сервера не уезжают).
 - `dist/` в git **не коммитим** (см. `.gitignore`).
 
 Локальный превью перед выкладкой:
