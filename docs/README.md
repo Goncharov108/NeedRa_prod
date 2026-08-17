@@ -13,6 +13,7 @@
 | Open Design skills | [SKILLS_PLAYBOOK.md](./SKILLS_PLAYBOOK.md) |
 | Ассеты от владельца | [ASSETS_CHECKLIST.md](./ASSETS_CHECKLIST.md) — частично ожидает |
 | Hero-варианты | [HERO_VARIANTS.md](./HERO_VARIANTS.md) — 3 тона на выбор |
+| Orbit-карточки | [ORBIT_CARDS_EDITING.md](./ORBIT_CARDS_EDITING.md) — masters, промпты, QA и возврат к редактированию |
 | Прототип OD | `landing-dramaturgy.html`, `noise-to-chat.html` |
 | Продакшен-лендинг | https://needra.ru — [ops/](./ops/) |
 | VPS / деплой / Git | [ops/README.md](./ops/README.md) |

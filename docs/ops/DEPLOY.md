@@ -100,10 +100,12 @@ certbot --nginx -d needra.ru -d www.needra.ru --redirect
 ## Проверки после деплоя
 
 - [ ] https://needra.ru открывается, title NeedRa
-- [ ] https://www.needra.ru открывается (или редирект)
+- [ ] https://www.needra.ru → 301 на https://needra.ru (канон — apex)
 - [ ] http → https редирект
 - [ ] CTA на https://lk.needra.ru/ живой
 - [ ] Нет смешанного контента (всё по https)
+- [ ] В `<head>`: `yandex-verification` = `6bd627d9a4511651`, canonical `https://needra.ru/`, og:url, og:image
+- [ ] `/robots.txt` и `/sitemap.xml` — `text/plain` и `text/xml`, не HTML
 
 ## Типичные проблемы
 

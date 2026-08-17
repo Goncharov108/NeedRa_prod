@@ -1,0 +1,109 @@
+# NeedRa — визуальная концепция лендинга
+
+Версия: 0.1
+
+## Big idea
+
+**Селлерский визуальный шум схлопывается в одну строку промпта.**
+
+Таблицы, графики, KPI-плитки, фильтры, боковые меню — всё это **растворяется** и фокусируется на чате NeedRa.
+
+## Метафора и бренд
+
+- Логотип NeedRa: **N** в рамке-стрелках (цикл, обмен).  
+- Анимация hero **эхом** повторяет цикл: хаос → фокус → действие (ввод запроса).  
+- Палитра: тёмный графит `#2C353F`, белый текст, акцент `#6EE7B7` — см. OD `DESIGN.md`.
+
+## Hero-композиция (гибрид)
+
+```
+┌─────────────────────────────────────────┐
+│  Logo                    [Регистрация]  │
+├─────────────────────────────────────────┤
+│  H1: боль (бит 1)                       │
+│  Sub: обещание                          │
+│                                         │
+│  ┌─ scroll scene ─────────────────────┐ │
+│  │  [таблицы][графики][дашборды]     │ │
+│  │         ↓ схлопывание              │ │
+│  │  ┌──────────────────────────────┐  │ │
+│  │  │ Спросите про ваши данные WB… │  │ │
+│  │  └──────────────────────────────┘  │ │
+│  └────────────────────────────────────┘ │
+│                                         │
+│  [ Зарегистрироваться ]  Как работает   │
+└─────────────────────────────────────────┘
+```
+
+## Scroll-сцена «noise-to-chat»
+
+**Файл-артефакт:** `noise-to-chat.html` (OD + продакшен)
+
+### Поведение (desktop)
+
+1. **0–30% scroll:** фрагменты UI (мини-таблицы, sparkline, donut, фильтры) float вокруг центра, лёгкий parallax, приглушённые цвета.  
+2. **30–70%:** элементы **scale down** + **opacity** → стягиваются к центру.  
+3. **70–100%:** остаётся **одна строка чата** (крупная, с курсором/blink), фон чистый.
+
+### Поведение (mobile)
+
+- Упрощение: 2 фазы вместо 3 (шум → чат), без тяжёлого parallax.  
+- `prefers-reduced-motion`: статичный before/after (split или два кадра).
+
+### Техника
+
+- Skill: **gsap-scrolltrigger** (scrub, pin опционально на 1 viewport).  
+- Без WebGL на v1 — CSS + GSAP достаточно.  
+- Performance: transform/opacity only; не анимировать box-shadow/layout.
+
+## Элементы «шума» (decorative)
+
+| Элемент | Назначение |
+|---------|------------|
+| Мини-таблица SKU / выручка | Узнаваемость селлера |
+| Line chart «заказы» | Графики |
+| 3 KPI cards | Дашборды |
+| Sidebar icons | «Ещё один сервис» |
+| Filter chips | Сложность UI |
+
+Все — **абстрактные данные**, не реальные цифры клиентов (placeholder numbers OK).
+
+## Типографика и плотность
+
+- Hero H1: max 2–3 строки на desktop ([COPY_VOICE.md](./COPY_VOICE.md)).  
+- Секции ниже: больше воздуха, одна мысль на блок.  
+- Dark theme по умолчанию для hero; light optional для длинного чтения.
+
+## Do / Don't (визуал)
+
+### Do
+- Контраст «до/после» в одной сцене  
+- Строка чата — самый читаемый элемент в финале анимации  
+- Логотип в header, не перекрывать анимацию  
+
+### Don't
+- Фиолетовый WB как primary  
+- Стоковые люди в офисах  
+- 3D isometric «SaaS clutter» клише  
+- Автовоспроизведение звука  
+
+## Связь с Open Design
+
+- Канон токенов: OD project `needra` → `DESIGN.md`  
+- Прототипы: `landing-dramaturgy.html`, `noise-to-chat.html`  
+- Продакшен: перенос в Vite, те же CSS variables  
+
+## I-Lang brief (для design-brief skill)
+
+```
+[PLAN:@DESIGN|type=saas_landing]
+  |palette=monochrome_dark|accent=mint
+  |typography=inter|display=inter
+  |layout=single_column|max_width=1200px
+  |mood=professional_minimal
+  |density=spacious|section_gap=96px
+  |hero=headline+subhead+scroll_scene+cta
+  |sections=problem,goal,imagine,hope,solution,proof,scarcity,cta,faq
+  |exclude=parallax_heavy,stock_photos,wb_purple
+  |responsive=mobile_first
+```

@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="yandex-verification" content="6bd627d9a4511651" />
   <script>
     /* До CSS/JS: не даём браузеру открыть середину спирали */
     try { history.scrollRestoration = "manual"; } catch (e) {}
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   </script>
-  <title>NeedRa — аналитика Wildberries через чат с ИИ</title>
-  <meta name="description" content="NeedRa: спросите данные WB одной строкой — получите таблицу, график или Excel. Один чат вместо десятка дашбордов." />
-  <meta property="og:title" content="NeedRa — аналитика WB через чат" />
+  <title>NeedRa — аналитика Wildberries и Ozon через чат с ИИ</title>
+  <meta name="description" content="NeedRa: спросите данные WB и Ozon одной строкой — получите таблицу, график или Excel. Один чат вместо десятка дашбордов." />
+  <meta property="og:title" content="NeedRa — аналитика WB и Ozon через чат" />
   <meta property="og:description" content="Спросите — получите ответ. Таблицы, графики, маски, Excel." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
@@ -18,11 +19,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="landing-styles.css?v=no-horizon" />
+  <link rel="stylesheet" href="landing-styles.css?v=landing-register" />
   <link rel="stylesheet" href="landing-hero-v3.1.css?v=d5-baked-cards" />
-  <link rel="stylesheet" href="landing-v3.css?v=consent-links" />
+  <link rel="stylesheet" href="landing-v3.css?v=ozon" />
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      k = e.createElement(t);
+      a = e.getElementsByTagName(t)[0];
+      k.async = 1;
+      k.src = r;
+      a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(94171170, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body class="hero-v31-page landing-v3">
+  <noscript
+    ><div>
+      <img
+        src="https://mc.yandex.ru/watch/94171170"
+        style="position: absolute; left: -9999px"
+        alt=""
+      /></div
+  ></noscript>
   <div class="lv3-ambient" aria-hidden="true">
     <span class="lv3-ambient__orb lv3-ambient__orb--a"></span>
     <span class="lv3-ambient__orb lv3-ambient__orb--b"></span>
@@ -73,6 +111,8 @@
               <div class="singularity-hub" id="singularityHub">
                 <div class="blackhole-hub" aria-hidden="true">
                   <div class="bh-art" aria-hidden="true">
+                    <!-- Только под PNG: гасит звёзды в прозрачном ядре; арт дыры всегда сверху -->
+                    <span class="bh-horizon" aria-hidden="true"></span>
                     <img id="blackholeArt" class="bh-img" src="/assets/hero/blackhole.png" alt="" width="850" height="850" decoding="async" fetchpriority="high" />
                   </div>
                 </div>
@@ -105,19 +145,27 @@
       <div class="grid-12">
         <div class="col-wide">
         <p class="essence-text" id="essenceText" data-od-id="essence-text">
-          <strong>NeedRa</strong> — инновационный взгляд на сервис. Бесконечное количество задач — одно поле для
-          <button type="button" class="kw" data-kw="prompt" data-tip="Один запрос вместо десятка фильтров">промпта</button>.
-          Ваш
-          <button type="button" class="kw" data-kw="agent" data-tip="ИИ-помощник поверх всех ваших данных">агент</button>
-          поверх данных WB. Общается на
-          <button type="button" class="kw" data-kw="russian" data-tip="Вопросы и ответы без «английского BI»">русском</button>.
-          Доступно всё из
-          <button type="button" class="kw" data-kw="api" data-tip="Только ваши данные из кабинета">API Wildberries</button>
-          о вашем бизнесе — и больше. ИИ собирает вид, не подменяет цифры: таблицы, отчёты и графики так, как нужно вам. Сохраните
+          <strong>NeedRa</strong> — инновационный взгляд на сервис. Собери уникальный кабинет, о котором ты и твоя команда всегда мечтали. Не десятки чужих сервисов и таблиц, а холст для реализации твоего творческого потенциала — через
+          <button type="button" class="kw" data-kw="prompt" data-tip="запросы ИИ агенту">промпты</button>
+          встроенному
+          <button type="button" class="kw" data-kw="agent" data-tip="ИИ-помощник поверх данных WB, Ozon и твоих документов">агенту</button>.
+          Он исследует данные из
+          <button type="button" class="kw" data-kw="api" data-tip="Только твои данные из кабинета Wildberries">API Wildberries</button>
+          и
+          <button type="button" class="kw" data-kw="ozon" data-tip="Только твои данные из кабинета Ozon">API Ozon</button>
+          и
+          <button type="button" class="kw" data-kw="match" data-tip="Связывает выгрузки WB и Ozon с твоими файлами: себестоимость, налоги и всё, что загрузишь">метчит</button>
+          их с любыми дополнительно загруженными документами. ИИ собирает
+          <button type="button" class="kw" data-kw="rag" data-tip="Личная база знаний на твоих данных: отвечает по фактам из API и документов, не выдумывает цифры">RAG-систему</button>
+          на одном сервере для тебя лично — таблицы, отчёты, графики — и не подменяет факты. Сохрани
           <button type="button" class="kw" data-kw="mask" data-tip="Шаблон вида для ежедневного обновления">маску</button>
-          для ежедневного обновления. Скачайте нужное в
+          на каждый день. Нужное скачай в
           <button type="button" class="kw" data-kw="excel" data-tip="Выгрузка результата в один клик">Excel</button>.
         </p>
+        <ul class="mp-line" aria-label="Поддерживаемые маркетплейсы">
+          <li class="mp-chip mp-chip--wb">Wildberries</li>
+          <li class="mp-chip mp-chip--ozon">Ozon</li>
+        </ul>
         <div class="kw-card" id="kwCard" hidden data-od-id="kw-card">
           <span class="kw-card-ring" aria-hidden="true">↻</span>
           <strong class="kw-card-title" id="kwCardTitle"></strong>
@@ -131,7 +179,7 @@
       <div class="grid-12">
         <header class="section-head col-wide">
           <h2 data-od-id="relief-headline">Устали путаться в бесконечных сервисах и перегруженных таблицах?</h2>
-          <p class="below-lead" id="reliefLead" data-od-id="relief-lead">Представьте: мгновенные ответы на конкретные вопросы — и панель управления магазином, собранная индивидуально для вас.</p>
+          <p class="below-lead" id="reliefLead" data-od-id="relief-lead">Представьте: мгновенные ответы на конкретные вопросы — и панель управления магазином, собранная тобой.</p>
         </header>
         <div class="relief-stage col-wide" id="reliefStage" data-od-id="relief-stage">
           <div class="relief-split" id="reliefSplit">
@@ -145,14 +193,15 @@
                   </div>
                   <div class="chaos-tabs chaos-tabs--dense">
                     <span class="chaos-tab is-wb is-active">WB · Заказы</span>
+                    <span class="chaos-tab is-ozon">Ozon · Заказы</span>
                     <span class="chaos-tab is-wb">WB · Остатки</span>
                     <span class="chaos-tab is-sheet">Sheets · Сводка</span>
+                    <span class="chaos-tab is-ozon">Ozon · Остатки</span>
                     <span class="chaos-tab is-wb">WB · Реклама</span>
                     <span class="chaos-tab is-svc">MPSTATS</span>
-                    <span class="chaos-tab is-sheet">Sheets · SKU</span>
+                    <span class="chaos-tab is-ozon">Ozon · Финансы</span>
                     <span class="chaos-tab is-wb">WB · Финансы</span>
                     <span class="chaos-tab is-svc">Moneyplace</span>
-                    <span class="chaos-tab is-wb">WB · Поставки</span>
                     <span class="chaos-tab is-sheet">Sheets · ДРР</span>
                     <span class="chaos-tab">+8</span>
                   </div>
@@ -404,26 +453,33 @@
 
     <section class="below-section below-section--muted" id="pricing" data-od-id="section-pricing">
       <div class="grid-12">
-        <div class="pricing-toggle-wrap col-center" data-od-id="pricing-toggle">
-          <span class="pricing-toggle-label" id="pricingLabelNow">Сейчас</span>
-          <button type="button" class="pricing-toggle" id="pricingToggle" role="switch" aria-checked="false" aria-label="Переключить: сейчас или каждый день">
-            <span class="pricing-toggle-thumb"></span>
-          </button>
-          <span class="pricing-toggle-label" id="pricingLabelDaily">Каждый день</span>
-        </div>
         <div class="pricing-cards col-wide" data-od-id="pricing-cards">
-          <article class="price-card price-card--free is-glow" id="priceFree" data-od-id="price-free">
+          <article class="price-card price-card--free" id="priceFree" data-od-id="price-free">
             <span class="price-badge">Старт</span>
             <h3>Бесплатно</h3>
-            <p class="price-desc">первая загрузка всех данных из API + общение с агентом</p>
+            <p class="price-desc">первая загрузка данных магазина из API + общение с агентом</p>
+            <ul class="price-bullets">
+              <li>подгрузка 1 своего документа</li>
+            </ul>
           </article>
-          <article class="price-card price-card--paid" id="pricePaid" data-od-id="price-paid">
-            <h3><span class="price-amount">5 000 ₽</span><span class="price-period">/мес</span></h3>
-            <p class="price-desc">ежедневное наполнение данными из API Wildberries</p>
+          <article class="price-card price-card--paid" id="priceStandard" data-od-id="price-standard">
+            <span class="price-badge">Стандарт</span>
+            <h3><span class="price-amount">5 000 ₽</span><span class="price-period">/мес · магазин</span></h3>
+            <p class="price-desc">ежедневное обновление одного кабинета WB или Ozon</p>
             <ul class="price-bullets price-bullets--paid">
-              <li>подгрузка своих данных: себестоимость, налоги, индивидуальные метрики</li>
-              <li>свои дашборды и расчёты — на постоянке после оплаты</li>
-              <li>агент работает поверх вашего полного набора данных</li>
+              <li>второй магазин — отдельная подписка (WB + Ozon = 5 000 + 5 000 ₽)</li>
+              <li>создание и сохранение своих дашбордов, таблиц и графиков</li>
+              <li>подгрузка 10 своих документов с данными: себестоимость, налоги, прочие индивидуальные метрики</li>
+              <li>глубина хранения — 3 месяца</li>
+            </ul>
+          </article>
+          <article class="price-card price-card--paid" id="pricePro" data-od-id="price-pro">
+            <span class="price-badge">Pro</span>
+            <h3><span class="price-amount">20 000 ₽</span><span class="price-period">/мес · магазин</span></h3>
+            <p class="price-desc">всё из тарифа Стандарт для одного кабинета + расширенные лимиты</p>
+            <ul class="price-bullets price-bullets--paid">
+              <li>подгрузка до 100 своих документов</li>
+              <li>глубина хранения — 1 год</li>
             </ul>
           </article>
         </div>
@@ -435,37 +491,44 @@
         <div class="signup-wrap col-wide">
         <div class="signup-stars" aria-hidden="true" data-od-id="signup-stars">
           <span class="signup-star" data-field="email"></span>
-          <span class="signup-star" data-field="phone"></span>
-          <span class="signup-star" data-field="api"></span>
+          <span class="signup-star" data-field="password"></span>
           <span class="signup-star" data-field="consent"></span>
         </div>
-        <h2 data-od-id="signup-headline">Первая загрузка данных — бесплатно</h2>
-        <form class="signup-form" id="signupForm" action="https://lk.needra.ru/" method="get" novalidate data-od-id="signup-form">
+        <h2 data-od-id="signup-headline">Зарегистрироваться</h2>
+        <form
+          class="signup-form"
+          id="signupForm"
+          action="https://lk.needra.ru/dev/auth/landing-register"
+          method="post"
+          novalidate
+          data-od-id="signup-form"
+          data-lk-endpoint="https://lk.needra.ru/dev/auth/landing-register"
+        >
           <label class="field">
             <span class="field-label">Email <abbr title="обязательно">*</abbr></span>
             <input type="email" name="email" id="signupEmail" required autocomplete="email" placeholder="you@example.com" data-od-id="signup-email" />
             <span class="field-error" id="emailError" role="alert"></span>
           </label>
-          <label class="field">
-            <span class="field-label">Телефон</span>
-            <input type="tel" name="phone" id="signupPhone" autocomplete="tel" placeholder="+7" data-od-id="signup-phone" />
-          </label>
-          <label class="field">
-            <span class="field-label">Ключ API Wildberries (чтение) <abbr title="обязательно">*</abbr></span>
-            <div class="field-api">
-              <input type="password" name="api_key" id="signupApi" required autocomplete="off" placeholder="Вставьте ключ" data-od-id="signup-api" />
-              <button type="button" class="btn-service btn-api-toggle" id="apiToggle" aria-label="Показать ключ">Показать</button>
-            </div>
-            <span class="field-hint">Инструкция «где взять ключ» — <span class="field-todo">скоро</span></span>
-            <span class="field-error" id="apiError" role="alert"></span>
-          </label>
+          <div class="signup-row">
+            <label class="field">
+              <span class="field-label">Пароль <abbr title="обязательно">*</abbr></span>
+              <input type="password" name="password" id="signupPassword" required autocomplete="new-password" minlength="8" placeholder="Минимум 8 символов" data-od-id="signup-password" />
+              <span class="field-error" id="passwordError" role="alert"></span>
+            </label>
+            <label class="field">
+              <span class="field-label">Подтверждение пароля <abbr title="обязательно">*</abbr></span>
+              <input type="password" name="password_confirmation" id="signupPasswordConfirm" required autocomplete="new-password" minlength="8" placeholder="Повторите пароль" data-od-id="signup-password-confirm" />
+              <span class="field-error" id="passwordConfirmError" role="alert"></span>
+            </label>
+          </div>
           <label class="field field-check">
             <input type="checkbox" name="consent" id="signupConsent" required data-od-id="signup-consent" />
             <span>Я даю <a href="/legal/personal-data-consent.html" target="_blank" rel="noopener">согласие</a> на обработку персональных данных, включая трансграничную передачу для ИИ-агента. Ознакомлен(а) с <a href="/legal/privacy-policy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a> и <a href="/legal/terms-of-service.html" target="_blank" rel="noopener">Пользовательским соглашением</a> <abbr title="обязательно">*</abbr></span>
           </label>
-          <button type="submit" class="btn btn-service btn-service--primary btn-lg signup-submit" data-od-id="signup-submit">Зарегистрироваться и загрузить данные →</button>
+          <button type="submit" class="btn btn-service btn-service--primary btn-lg signup-submit" data-od-id="signup-submit">Зарегистрироваться →</button>
+          <p class="signup-status" id="signupStatus" role="status" aria-live="polite" hidden></p>
         </form>
-        <p class="signup-note" data-od-id="signup-note">Ежедневное обновление — 5 000 ₽/мес · свой агент · один сервис вместо множества</p>
+        <p class="signup-note" data-od-id="signup-note">Стандарт 5 000 ₽ · Pro 20 000 ₽/мес за магазин · свой агент · один сервис вместо множества</p>
         <p class="signup-fallback" data-od-id="signup-fallback">Уже есть аккаунт → <a href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">lk.needra.ru</a></p>
         </div>
       </div>
@@ -482,18 +545,18 @@
         <div class="faq-terminal" id="faqList" data-od-id="faq-list">
           <details class="faq-item" data-od-id="faq-data">
             <summary><span class="faq-prompt">&gt;</span> Откуда данные?</summary>
-            <p><span class="faq-reply">↳</span> API Wildberries, ваши собственные данные. Хранение в NeedRa.</p>
+            <p><span class="faq-reply">↳</span> API Wildberries и Ozon, ваши собственные данные. Хранение в NeedRa.</p>
           </details>
           <details class="faq-item" data-od-id="faq-update">
             <summary><span class="faq-prompt">&gt;</span> Обновление каждый день?</summary>
-            <p><span class="faq-reply">↳</span> Первая загрузка бесплатна. Автообновление — 5 000 ₽/мес.</p>
+            <p><span class="faq-reply">↳</span> Первая загрузка магазина бесплатна. Автообновление — Стандарт 5 000 ₽ или Pro 20 000 ₽ в месяц за каждый магазин. WB + Ozon на Стандарте — 5 000 + 5 000 ₽.</p>
           </details>
           <details class="faq-item" data-od-id="faq-agent">
             <summary><span class="faq-prompt">&gt;</span> Свой агент?</summary>
-            <p><span class="faq-reply">↳</span> Да, поверх ваших данных WB.</p>
+            <p><span class="faq-reply">↳</span> Да, поверх ваших данных WB и Ozon.</p>
           </details>
           <details class="faq-item" data-od-id="faq-replace">
-            <summary><span class="faq-prompt">&gt;</span> Заменяет ЛК WB?</summary>
+            <summary><span class="faq-prompt">&gt;</span> Заменяет ЛК WB или Ozon?</summary>
             <p><span class="faq-reply">↳</span> Нет. Слой аналитики через диалог.</p>
           </details>
           <details class="faq-item" data-od-id="faq-record">
@@ -517,7 +580,7 @@
         <a href="/legal/cookie-policy.html">Cookie</a>
       </div>
       <div class="col-span-4 footer-contacts">
-        <a class="footer-tg" href="https://t.me/GoncharovD" target="_blank" rel="noopener noreferrer" data-od-id="footer-tg" aria-label="Свяжитесь с нами в Telegram">
+        <a class="footer-tg" href="https://t.me/NeedRabot?start=landing" target="_blank" rel="noopener noreferrer" data-od-id="footer-tg" aria-label="Свяжитесь с нами в Telegram">
           <span class="footer-tg-label">Свяжитесь с нами</span>
           <svg class="footer-tg-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
             <path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
@@ -532,10 +595,10 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="landing-hero-rng.js"></script>
-  <script src="landing-hero-stars.js"></script>
+  <script src="landing-hero-stars.js?v=no-canvas-hole"></script>
   <script src="landing-hero-v3.1-widgets.js"></script>
-  <script src="landing-hero-backdrop.js"></script>
-  <script src="landing-v3-main.js?v=gravity-alpha"></script>
-  <script src="landing-below.js?v=relief-soft-b"></script>
+  <script src="landing-hero-backdrop.js?v=horizon-fade"></script>
+  <script src="landing-v3-main.js?v=horizon-fade"></script>
+  <script src="landing-below.js?v=ads-goals"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Disallow: /hero-v
+Disallow: /orbit-chips.html
+Disallow: /landing-v3.html
+Disallow: /index.v1.html
+Disallow: /noise-to-chat.html
+
+Host: https://needra.ru
+Sitemap: https://needra.ru/sitemap.xml

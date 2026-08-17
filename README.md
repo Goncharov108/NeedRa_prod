@@ -39,6 +39,7 @@ npm run deploy
 | [docs/HERO_VARIANTS.md](./docs/HERO_VARIANTS.md) | 3 варианта Hero |
 | [docs/VISUAL_CONCEPT.md](./docs/VISUAL_CONCEPT.md) | «Шум → строка чата» |
 | [docs/ASSETS_CHECKLIST.md](./docs/ASSETS_CHECKLIST.md) | Что нужно от владельца (URL, скрины) |
+| [docs/ORBIT_CARDS_EDITING.md](./docs/ORBIT_CARDS_EDITING.md) | Как вернуться к редактированию 47 hero-карточек |
 
 ## Open Design
 

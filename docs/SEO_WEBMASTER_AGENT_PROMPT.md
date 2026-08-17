@@ -52,8 +52,9 @@ NeedRa — аналитика кабинета продавца Wildberries и/�
 - Sitemap уже отправлен в Вебмастер
 - Метрика `94171170`; цели регистрации в `public/landing-below.js` (`signup_success` и др.)
 - Прод-страница — `index.html` (hero v3.1 + секции). `index.html` не откатывать к v1. Лабораторные `hero-v*.html` в индекс и sitemap не тащить
+- Вечер 17.08, on-page главной: canonical `https://needra.ru/`, og:url, og:image `/assets/brand/og-cover.png` (1200×630), кириллические title/description («аналитика ВБ и Озон»), видимый `<h1>` в `#essence`, JSON-LD Organization / WebSite / SoftwareApplication **без** AggregateRating. Сводка Вебмастера ещё 404 («host not loaded») — ИКС и индекс ждать, не чинить метатегом. Переобход главной поставлен в очередь (`task_id` 7fd99270-…, квота 150).
 
-Дыры на 17.08 (проверь сам по файлам, не верь списку вслепую): нет canonical / og:url / og:image; в `index.html` может не быть `<h1>`; description и og слабо бьют в кириллические запросы; JSON-LD нет; www vs apex — проверь редирект.
+Осталось после вечера 17.08: появление в индексе Яндекса / переобход, когда API сводки перестанет отдавать 404; кластерные URL (юнит / отчёты) — только после «да» владельца. www→apex 301 на nginx уже стоит (`https://www.needra.ru` → `https://needra.ru/`).
 
 ### Зона ответственности
 

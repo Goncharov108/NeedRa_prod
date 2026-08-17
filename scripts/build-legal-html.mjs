@@ -10,11 +10,11 @@ const docsDir = path.join(root, "docs/legal");
 const outDir = path.join(root, "public/legal");
 
 const files = [
-  { md: "privacy-policy.md", title: "Политика конфиденциальности — NeedRa", badge: "v2.0" },
-  { md: "personal-data-consent.md", title: "Согласие на обработку ПД — NeedRa", badge: "v2.0" },
-  { md: "terms-of-service.md", title: "Пользовательское соглашение — NeedRa", badge: "v2.0" },
-  { md: "public-offer.md", title: "Публичная оферта — NeedRa", badge: "v2.0" },
-  { md: "cookie-policy.md", title: "Политика cookie — NeedRa", badge: "v2.0" },
+  { md: "privacy-policy.md", title: "Политика конфиденциальности — NeedRa", badge: "v3.1" },
+  { md: "personal-data-consent.md", title: "Согласие на обработку ПД — NeedRa", badge: "v2.1" },
+  { md: "terms-of-service.md", title: "Пользовательское соглашение — NeedRa", badge: "v2.2" },
+  { md: "public-offer.md", title: "Публичная оферта — NeedRa", badge: "v2.2" },
+  { md: "cookie-policy.md", title: "Политика cookie — NeedRa", badge: "v3.0" },
 ];
 
 /** Экранирует HTML. */
