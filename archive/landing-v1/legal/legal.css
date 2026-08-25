@@ -1,0 +1,118 @@
+/* Стили юридических страниц NeedRa */
+:root {
+  --canvas: #080b0f;
+  --surface: #121820;
+  --text: #e6edf3;
+  --text-secondary: #6b7a8c;
+  --accent: #5dffc8;
+  --border: rgba(255, 255, 255, 0.08);
+  --font-display: "Sora", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--canvas);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 24px 16px 64px;
+}
+
+.legal-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.legal-back:hover { text-decoration: underline; }
+
+.legal-draft {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  color: #ff6b4a;
+  border: 1px solid rgba(255, 107, 74, 0.35);
+  border-radius: 6px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.legal-meta {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 28px 0 12px;
+}
+
+p, li { font-size: 0.9375rem; margin-bottom: 12px; }
+
+ul, ol { padding-left: 1.25rem; margin-bottom: 16px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.875rem;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--surface); }
+
+a { color: var(--accent); }
+
+.legal-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 16px;
+  font-size: 0.8125rem;
+}
+
+.legal-nav a { color: var(--text-secondary); }
+.legal-nav a:hover { color: var(--accent); }
+
+code, .checkbox-text {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  margin: 12px 0;
+  white-space: pre-wrap;
+}

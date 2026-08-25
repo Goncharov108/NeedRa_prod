@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+Disallow: /hero-v
+Disallow: /orbit-chips.html
+Disallow: /landing-v3.html
+Disallow: /index.v1.html
+Disallow: /noise-to-chat.html
+Disallow: /seo-prototype.html
+Disallow: /seo-prototype-v0.html
+Disallow: /karkas-home.html
+Disallow: /karkas-ozon.html
+Disallow: /karkas-wb.html
+
+Host: https://needra.ru
+Sitemap: https://needra.ru/sitemap.xml

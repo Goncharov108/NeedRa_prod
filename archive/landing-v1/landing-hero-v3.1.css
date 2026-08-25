@@ -1,0 +1,115 @@
+/**
+ * Hero v3.1 — оболочка + невесомое покачивание карточек.
+ */
+
+.hero-v31-page {
+  padding-bottom: 0;
+}
+
+.hero-v31-page .sticky-cta {
+  display: none;
+}
+
+.hv3-header-badge-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hv3-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+}
+
+.hv3-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: max(10%, env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 8;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  pointer-events: none;
+  opacity: 0.72;
+}
+
+.hv3-footer {
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--canvas) 94%, transparent);
+}
+
+.hv3-footer-note {
+  text-align: right;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 767px) {
+  .hv3-footer-note {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hv3-scroll-cue {
+    display: none;
+  }
+}
+
+/* PNG-карточки: один слой scale (orbit-arm), пропорции из реестра */
+.orbit-widget--png {
+  --ow-w: var(--card-w);
+  --ow-scale: 1;
+  width: var(--ow-w);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.orbit-widget--png .ow-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--card-ar, auto);
+  border-radius: 8px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* Тон запечён в PNG (D5); filter снят ради GPU */
+  opacity: 0.9;
+}
+
+html.scene-scrolling .orbit-widget--png {
+  will-change: transform, opacity;
+}
+
+/* will-change только пока идёт zero-G (не scrub / не settled) */
+html.scene-enhanced:not(.scene-scrolling):not(.scene-settled) .orbit-float-wrap {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-v31-page .orbit-float-wrap {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .hv3-scroll-cue {
+    display: none;
+  }
+}

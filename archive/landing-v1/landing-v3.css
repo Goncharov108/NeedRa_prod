@@ -1,0 +1,351 @@
+/**
+ * Полный лендинг v3 — стыковка hero-v31-page со sticky-cta и секциями ниже.
+ * Песочницы hero-v3.1*.html не затрагивает (нужен класс .landing-v3 на body).
+ */
+
+/* Программный scrollTo(0) не должен анимироваться (иначе + overflow:hidden ломают сброс). */
+html:has(body.landing-v3) {
+  scroll-behavior: auto;
+}
+
+/* Временно снимаем overflow:hidden прелоадера, чтобы можно было обнулить scrollY. */
+html.force-scroll-top,
+html.force-scroll-top body {
+  overflow: auto !important;
+  scroll-behavior: auto !important;
+}
+
+body.landing-v3 {
+  /* Чуть короче пин: меньше мёртвого хода после готового чата (без сжатия всей сцены) */
+  --scene-h: 235vh;
+}
+
+@media (min-width: 768px) {
+  body.landing-v3 {
+    --scene-h: 225vh;
+  }
+}
+
+body.hero-v31-page.landing-v3 {
+  padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  background: var(--canvas);
+}
+
+/* ── Плавный выход из preloader (только landing-v3) ── */
+/* Сайт уже виден под оверлеем; GSAP гасит только шторку — без fade контента (вспышка). */
+
+html.is-preloading body.landing-v3 .header,
+html.is-preloading body.landing-v3 main,
+html.is-preloading body.landing-v3 footer,
+html.is-preloading body.landing-v3 .sticky-cta,
+html.is-preloading body.landing-v3 .beat-progress,
+html.is-preloading body.landing-v3 .lv3-ambient,
+html.is-reveal-ready body.landing-v3 .header,
+html.is-reveal-ready body.landing-v3 main,
+html.is-reveal-ready body.landing-v3 footer,
+html.is-reveal-ready body.landing-v3 .sticky-cta,
+html.is-reveal-ready body.landing-v3 .beat-progress,
+html.is-reveal-ready body.landing-v3 .lv3-ambient {
+  visibility: visible !important;
+  opacity: 1;
+  pointer-events: none;
+}
+
+html.is-reveal-ready body {
+  overflow: hidden;
+}
+
+html.is-reveal-ready body.landing-v3 .preloader {
+  transition: none !important;
+}
+
+html.is-revealed body.landing-v3 .header,
+html.is-revealed body.landing-v3 main,
+html.is-revealed body.landing-v3 footer,
+html.is-revealed body.landing-v3 .sticky-cta,
+html.is-revealed body.landing-v3 .beat-progress,
+html.is-revealed body.landing-v3 .lv3-ambient {
+  pointer-events: auto;
+}
+
+body.hero-v31-page.landing-v3 .sticky-cta {
+  display: inline-flex;
+}
+
+/*
+ * Единая ширина контента ниже hero = col-wide (как relief-stage).
+ * Тексты и последние блоки (signup, faq) не уже сцен.
+ */
+body.landing-v3 #essence .col-wide,
+body.landing-v3 #relief .section-head,
+body.landing-v3 #signup .signup-wrap,
+body.landing-v3 #faq .col-wide {
+  grid-column: 2 / 12;
+}
+
+/* ── Секции прозрачные: виден ambient-декор ── */
+
+body.landing-v3 .below-section,
+body.landing-v3 .below-section--muted,
+body.landing-v3 .below-section--signup,
+body.landing-v3 .footer {
+  background: transparent;
+  border-top: none;
+}
+
+/*
+ * Хедер поверх hero (fixed), без «дырки» в потоке.
+ * Раньше position:relative на .header ломал fixed из landing-styles.
+ */
+body.landing-v3 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  /* Поверх hero: без плотной «плашки», звёзды видны с первого пикселя */
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--canvas) 72%, transparent) 0%,
+    color-mix(in srgb, var(--canvas) 28%, transparent) 70%,
+    transparent 100%
+  );
+  border-bottom: none;
+}
+
+body.landing-v3 .scene-pin {
+  padding-top: 0;
+  /* Короткий прозрачный хвост всего пина (canvas + звёзды), без дыры в середине */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%);
+}
+
+/*
+ * Затемнение звёзд как в каноне; только самый низ — в прозрачность под mask.
+ */
+body.landing-v3 .orbit-field::after {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--canvas) 55%, transparent) 45%,
+    var(--canvas) 88%,
+    transparent 100%
+  );
+}
+
+body.landing-v3 .singularity-stage,
+body.landing-v3 .orbit-field {
+  inset: 0;
+}
+
+body.landing-v3 .beat-progress {
+  position: fixed;
+  z-index: 150;
+}
+
+/* ── Relief: мягкий отклик слайдера (визуал окон не меняем) ── */
+
+body.landing-v3 .relief-chaos {
+  opacity: var(--chaos-fade, 1);
+}
+
+body.landing-v3 .relief-split.is-dragging .relief-chaos,
+body.landing-v3 .relief-split.is-dragging .relief-order,
+body.landing-v3 .relief-split.is-dragging .relief-divider {
+  transition: none;
+}
+
+body.landing-v3 .relief-split.is-settling .relief-chaos,
+body.landing-v3 .relief-split.is-settling .relief-order,
+body.landing-v3 .relief-split.is-settling .relief-divider {
+  transition:
+    clip-path 0.14s ease-out,
+    left 0.14s ease-out,
+    opacity 0.14s ease-out;
+}
+
+body.landing-v3 .relief-split.is-relief-busy .chaos-xl-error {
+  animation-play-state: paused;
+}
+
+body.landing-v3 .footer-tg {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+body.landing-v3 .footer-tg-label {
+  text-align: left;
+  white-space: nowrap;
+}
+
+body.landing-v3 .footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+body.landing-v3 .footer-legal a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+body.landing-v3 .footer-legal a:hover {
+  color: var(--text);
+}
+
+/* Ссылки в чекбоксе согласия — цвета лендинга, не дефолтный синий браузера */
+body.landing-v3 .field-check a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+body.landing-v3 .field-check a:hover {
+  color: color-mix(in srgb, var(--accent) 82%, white);
+  text-decoration-color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  body.landing-v3 .footer-tg {
+    align-items: center;
+  }
+}
+
+body.landing-v3 main,
+body.landing-v3 .footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Ambient: mint-ореолы + звёзды (fixed, под контентом) ── */
+
+.lv3-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lv3-ambient__orb {
+  position: absolute;
+  border-radius: 50%;
+  /* Без filter:blur — иначе постоянный GPU cost на весь скролл */
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 28%, transparent) 0%,
+    color-mix(in srgb, var(--accent) 10%, transparent) 42%,
+    transparent 72%
+  );
+  opacity: 0.9;
+}
+
+.lv3-ambient__orb--a {
+  width: min(72vw, 720px);
+  height: min(72vw, 720px);
+  left: -12%;
+  top: 8%;
+}
+
+.lv3-ambient__orb--b {
+  width: min(64vw, 640px);
+  height: min(64vw, 640px);
+  right: -10%;
+  top: 38%;
+  opacity: 0.7;
+}
+
+.lv3-ambient__orb--c {
+  width: min(80vw, 800px);
+  height: min(56vw, 560px);
+  left: 20%;
+  bottom: -8%;
+  opacity: 0.75;
+}
+
+/* Точечный starfield + лёгкая сетка */
+.lv3-ambient__stars {
+  position: absolute;
+  inset: 0;
+  opacity: 0.85;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(1.5px 1.5px at 6% 12%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(2px 2px at 14% 30%, color-mix(in srgb, var(--accent) 75%, white), transparent),
+    radial-gradient(1.5px 1.5px at 22% 58%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 28% 18%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 36% 74%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1.5px 1.5px at 44% 40%, color-mix(in srgb, var(--accent) 55%, white), transparent),
+    radial-gradient(1px 1px at 52% 10%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(2px 2px at 60% 62%, rgba(255, 255, 255, 0.72), transparent),
+    radial-gradient(1.5px 1.5px at 68% 26%, rgba(255, 255, 255, 0.58), transparent),
+    radial-gradient(1px 1px at 76% 82%, color-mix(in srgb, var(--accent) 50%, white), transparent),
+    radial-gradient(2px 2px at 84% 44%, rgba(255, 255, 255, 0.65), transparent),
+    radial-gradient(1.5px 1.5px at 92% 16%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 96% 70%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 10% 88%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1.5px 1.5px at 48% 92%, color-mix(in srgb, var(--accent) 45%, white), transparent),
+    radial-gradient(1px 1px at 33% 48%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 88% 54%, rgba(255, 255, 255, 0.55), transparent);
+  background-size:
+    56px 56px,
+    56px 56px,
+    auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lv3-ambient__orb {
+    opacity: 0.45;
+  }
+}
+
+/* Чипы маркетплейсов под текстом сути */
+body.landing-v3 .mp-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+body.landing-v3 .mp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--section-text);
+}
+
+body.landing-v3 .mp-chip::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+body.landing-v3 .mp-chip--wb::before {
+  background: #cb11ab;
+}
+
+body.landing-v3 .mp-chip--ozon::before {
+  background: #005bff;
+}
+
+body.landing-v3 .kw-card {
+  margin-top: 16px;
+}

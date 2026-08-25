@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru" class="is-preloading">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="yandex-verification" content="6bd627d9a4511651" />
-  <script>
-    /* До CSS/JS: не даём браузеру открыть середину спирали */
-    try { history.scrollRestoration = "manual"; } catch (e) {}
-    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  </script>
-  <title>NeedRa — аналитика ВБ и Озон: отчёты и прибыль через чат</title>
-  <meta name="description" content="Аналитика кабинета ВБ и Озон: спросите — получите таблицу, график или Excel. Прибыль, юнит-экономика и отчёты продавца Вайлдберриз. Регистрация бесплатно." />
+  <title>NeedRa — аналитика кабинета ВБ и Озон: юнит-экономика, прибыль, отчёты</title>
+  <meta name="description" content="Аналитика своего кабинета ВБ и Озон: юнит-экономика, прибыль, отчёты. Спросите — таблица, график или дашборд. Регистрация бесплатно.">
   <link rel="canonical" href="https://needra.ru/" />
-  <meta property="og:title" content="NeedRa — аналитика ВБ и Озон: отчёты и прибыль через чат" />
-  <meta property="og:description" content="Спросите данные ВБ и Озон — таблица, график или Excel. Прибыль, отчёты, юнит-экономика кабинета продавца." />
+  <meta property="og:title" content="NeedRa — аналитика кабинета ВБ и Озон: юнит-экономика, прибыль, отчёты" />
+  <meta property="og:description" content="Аналитика своего кабинета ВБ и Озон: юнит-экономика, прибыль, отчёты. Спросите — таблица, график или дашборд. Регистрация бесплатно." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:url" content="https://needra.ru/" />
@@ -21,8 +16,10 @@
   <meta property="og:image" content="https://needra.ru/assets/brand/og-cover.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="NeedRa — аналитика ВБ и Озон через чат" />
-  <link rel="icon" href="/assets/brand/logo-neon.svg" type="image/svg+xml" />
+  <meta property="og:image:alt" content="NeedRa — аналитика кабинета ВБ и Озон" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="120x120" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,12 +57,7 @@
     ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="landing-styles.css?v=seo-h1" />
-  <link rel="stylesheet" href="landing-hero-v3.1.css?v=d5-baked-cards" />
-  <link rel="stylesheet" href="landing-v3.css?v=ozon" />
+  <link rel="stylesheet" href="/lab-shared.css?v=site-v2">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
@@ -96,7 +88,7 @@
   </script>
   <!-- /Yandex.Metrika counter -->
 </head>
-<body class="hero-v31-page landing-v3">
+<body class="site" data-page="home" data-tint="home" data-fork="v1">
   <noscript
     ><div>
       <img
@@ -105,545 +97,1154 @@
         alt=""
       /></div
   ></noscript>
-  <div class="lv3-ambient" aria-hidden="true">
-    <span class="lv3-ambient__orb lv3-ambient__orb--a"></span>
-    <span class="lv3-ambient__orb lv3-ambient__orb--b"></span>
-    <span class="lv3-ambient__orb lv3-ambient__orb--c"></span>
-    <span class="lv3-ambient__stars"></span>
-  </div>
-  <div id="preloader" class="preloader" role="status" aria-live="polite" aria-label="Загрузка NeedRa">
-    <div class="preloader-inner">
-      <img class="preloader-logo" src="/assets/brand/logo-neon.svg" alt="" width="56" height="56" decoding="async" />
-      <span class="preloader-word">NeedRa</span>
-    </div>
-  </div>
 
-  <header class="header" data-od-id="site-header">
-    <div class="grid-12 header-inner">
-      <a class="logo col-span-6" href="/" aria-label="NeedRa" data-od-id="logo-link">
-        <span class="logo-mark" aria-hidden="true">
-          <img class="logo-svg" src="/assets/brand/logo-neon.svg" alt="" width="34" height="34" decoding="async" />
-        </span>
-        <span class="logo-word">NeedRa</span>
-      </a>
-      <div class="header-actions col-span-6">
-        <a class="btn btn-ghost" href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer" data-od-id="header-cta">В личный кабинет</a>
-      </div>
-    </div>
-  </header>
-
-  <nav class="beat-progress" aria-label="Этапы истории" data-od-id="beat-progress">
-    <a href="#top" class="beat-dot is-active" data-beat="hero" aria-label="Hero"></a>
-    <a href="#essence" class="beat-dot" data-beat="essence" aria-label="Суть"></a>
-    <a href="#relief" class="beat-dot" data-beat="relief" aria-label="Боль"></a>
-    <a href="#pricing" class="beat-dot" data-beat="pricing" aria-label="Тарифы"></a>
-    <a href="#signup" class="beat-dot" data-beat="signup" aria-label="Регистрация"></a>
-    <a href="#faq" class="beat-dot" data-beat="faq" aria-label="FAQ"></a>
-  </nav>
-
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-scene" id="heroScene">
-        <div class="scene-scroll" id="sceneScroll">
-          <div class="scene-pin">
-            <div class="starfield" id="starfield" aria-hidden="true">
-              <canvas id="starCanvas"></canvas>
-            </div>
-            <div class="orbit-field" id="orbitField" aria-hidden="true"></div>
-            <div class="singularity-stage" id="singularityStage">
-              <div class="void-bg" aria-hidden="true"></div>
-              <div class="singularity-hub" id="singularityHub">
-                <div class="blackhole-hub" aria-hidden="true">
-                  <div class="bh-art" aria-hidden="true">
-                    <!-- Только под PNG: гасит звёзды в прозрачном ядре; арт дыры всегда сверху -->
-                    <span class="bh-horizon" aria-hidden="true"></span>
-                    <img id="blackholeArt" class="bh-img" src="/assets/hero/blackhole.png" alt="" width="850" height="850" decoding="async" fetchpriority="high" />
-                  </div>
-                </div>
-              </div>
-              <div class="chat-singularity" id="chatSingularity">
-                <div class="chat-compose">
-                  <span class="chat-compose-fill" aria-hidden="true"></span>
-                  <svg class="chat-frame" viewBox="0 0 440 52" preserveAspectRatio="none" aria-hidden="true">
-                    <rect class="chat-frame-rect" x="1" y="1" width="438" height="50" rx="10" ry="10" pathLength="1" />
-                  </svg>
-                  <div class="chat-compose-body">
-                    <img class="chat-compose-logo" src="/assets/brand/logo-neon.svg" alt="" width="28" height="28" decoding="async" />
-                    <p class="chat-compose-label">
-                      <span class="chat-brand">NeedRa:&nbsp;</span>
-                      <span class="chat-text">Спроси что угодно...</span>
-                      <span class="chat-cursor" aria-hidden="true"></span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="site-page">
+    <header class="stage-head site-head" data-od-id="lab-prod-header" data-tint="home">
+          <div class="stage-head__inner">
+            <a class="stage-head__brand" href="/" aria-label="NeedRa">
+              <img class="stage-head__mark" src="/assets/brand/logo-mark.svg" alt="" aria-hidden="true">
+              <span class="stage-head__word">NeedRa</span>
+            </a>
+            <button type="button" class="site-head__burger" data-head-burger aria-expanded="false" aria-controls="site-nav" aria-label="Меню"><span></span><span></span><span></span></button>
+            <nav class="stage-head__nav" id="site-nav" aria-label="Навигация">
+              <a hidden class="stage-head__link" data-head-both href="/">Аналитика ВБ и Озон</a>
+              <a class="stage-head__mp" data-head-oz href="/analitika-ozon/"><img src="/assets/brand/logo-ozon.svg" alt="">Аналитика Озон</a>
+              <a class="stage-head__mp" data-head-wb href="/analitika-wb/"><img src="/assets/brand/logo-wb.svg" alt="">Аналитика ВБ</a>
+              <a class="stage-head__go" href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">В личный кабинет</a>
+            </nav>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Ниже hero ── -->
-
-    <section class="below-section below-section--muted" id="essence" data-od-id="section-essence">
-      <div class="grid-12">
-        <div class="col-wide">
-        <h1>Аналитика ВБ и Озон через чат с ИИ</h1>
-        <p class="essence-text" id="essenceText" data-od-id="essence-text">
-          <strong>NeedRa</strong> — инновационный взгляд на сервис. Собери уникальный кабинет, о котором ты и твоя команда всегда мечтали. Не десятки чужих сервисов и таблиц, а холст для реализации твоего творческого потенциала — через
-          <button type="button" class="kw" data-kw="prompt" data-tip="запросы ИИ агенту">промпты</button>
-          встроенному
-          <button type="button" class="kw" data-kw="agent" data-tip="ИИ-помощник поверх данных WB, Ozon и твоих документов">агенту</button>.
-          Он исследует данные из
-          <button type="button" class="kw" data-kw="api" data-tip="Только твои данные из кабинета Wildberries">API Wildberries</button>
-          и
-          <button type="button" class="kw" data-kw="ozon" data-tip="Только твои данные из кабинета Ozon">API Ozon</button>
-          и
-          <button type="button" class="kw" data-kw="match" data-tip="Связывает выгрузки WB и Ozon с твоими файлами: себестоимость, налоги и всё, что загрузишь">метчит</button>
-          их с любыми дополнительно загруженными документами. ИИ собирает
-          <button type="button" class="kw" data-kw="rag" data-tip="Личная база знаний на твоих данных: отвечает по фактам из API и документов, не выдумывает цифры">RAG-систему</button>
-          на одном сервере для тебя лично — таблицы, отчёты, графики — и не подменяет факты. Сохрани
-          <button type="button" class="kw" data-kw="mask" data-tip="Шаблон вида для ежедневного обновления">маску</button>
-          на каждый день. Нужное скачай в
-          <button type="button" class="kw" data-kw="excel" data-tip="Выгрузка результата в один клик">Excel</button>.
-        </p>
-        <ul class="mp-line" aria-label="Поддерживаемые маркетплейсы">
-          <li class="mp-chip mp-chip--wb">Wildberries</li>
-          <li class="mp-chip mp-chip--ozon">Ozon</li>
-        </ul>
-        <div class="kw-card" id="kwCard" hidden data-od-id="kw-card">
-          <span class="kw-card-ring" aria-hidden="true">↻</span>
-          <strong class="kw-card-title" id="kwCardTitle"></strong>
-          <p class="kw-card-body" id="kwCardBody"></p>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="below-section" id="relief" data-od-id="section-relief">
-      <div class="grid-12">
-        <header class="section-head col-wide">
-          <h2 data-od-id="relief-headline">Устали путаться в бесконечных сервисах и перегруженных таблицах?</h2>
-          <p class="below-lead" id="reliefLead" data-od-id="relief-lead">Представьте: мгновенные ответы на конкретные вопросы — и панель управления магазином, собранная тобой.</p>
         </header>
-        <div class="relief-stage col-wide" id="reliefStage" data-od-id="relief-stage">
-          <div class="relief-split" id="reliefSplit">
-            <div class="relief-chaos" id="reliefChaos" aria-hidden="true">
-              <div class="chaos-desk">
-                <!-- Нижний слой: экран = браузер на весь монитор -->
-                <div class="chaos-base">
-                  <div class="chaos-chrome">
-                    <span class="chaos-dots"></span>
-                    <span class="chaos-chrome-title">Chrome · 18 вкладок</span>
-                  </div>
-                  <div class="chaos-tabs chaos-tabs--dense">
-                    <span class="chaos-tab is-wb is-active">WB · Заказы</span>
-                    <span class="chaos-tab is-ozon">Ozon · Заказы</span>
-                    <span class="chaos-tab is-wb">WB · Остатки</span>
-                    <span class="chaos-tab is-sheet">Sheets · Сводка</span>
-                    <span class="chaos-tab is-ozon">Ozon · Остатки</span>
-                    <span class="chaos-tab is-wb">WB · Реклама</span>
-                    <span class="chaos-tab is-svc">MPSTATS</span>
-                    <span class="chaos-tab is-ozon">Ozon · Финансы</span>
-                    <span class="chaos-tab is-wb">WB · Финансы</span>
-                    <span class="chaos-tab is-svc">Moneyplace</span>
-                    <span class="chaos-tab is-sheet">Sheets · ДРР</span>
-                    <span class="chaos-tab">+8</span>
-                  </div>
-                  <div class="chaos-url">https://seller.wildberries.ru/analytics/…</div>
-                  <div class="chaos-base-body">
-                    <aside class="chaos-base-nav">
-                      <i></i><i></i><i></i><i></i><i></i>
-                    </aside>
-                    <div class="chaos-base-main">
-                      <div class="chaos-base-filters">
-                        <span></span><span></span><span></span>
-                      </div>
-                      <div class="chaos-base-grid">
-                        <i></i><i></i><i></i><i></i>
-                        <i></i><i></i><i></i><i></i>
-                        <i></i><i></i><i></i><i></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <!-- Поверх: Excel с ошибкой внутри файла -->
-                <div class="chaos-win chaos-win--excel">
-                  <div class="chaos-chrome chaos-chrome--xl">
-                    <span class="chaos-file-badge">XLS</span>
-                    <span class="chaos-chrome-title">сверка_Июль.xlsx — Excel</span>
-                  </div>
-                  <div class="chaos-xl-ribbon">
-                    <span class="is-on">Главная</span><span>Вставка</span><span>Данные</span>
-                  </div>
-                  <div class="chaos-xl-formula">
-                    <em>fx</em>
-                    <span>=ВПР(A2;ЛК!A:C;3;0)</span>
-                  </div>
-                  <div class="chaos-pane chaos-pane--xl">
-                    <div class="chaos-xl-sheet">
-                      <div class="chaos-xl-corner"></div>
-                      <div class="chaos-xl-cols"><b>A</b><b>B</b><b>C</b><b>D</b><b>E</b></div>
-                      <div class="chaos-xl-rows-n"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
-                      <div class="chaos-xl-cells">
-                        <span class="is-head">SKU</span><span class="is-head">ЛК</span><span class="is-head">Sheets</span><span class="is-head">Δ</span><span class="is-head">%</span>
-                        <span>1042</span><span>18,2</span><span>18,2</span><span>0</span><span>0</span>
-                        <span>2088</span><span>9,4</span><span class="is-err">#Н/Д</span><span class="is-err">!</span><span class="is-err">—</span>
-                        <span>3310</span><span>22,1</span><span>21,0</span><span class="is-warn">−1,1</span><span class="is-warn">−5</span>
-                        <span>4415</span><span>7,8</span><span>7,8</span><span>0</span><span>0</span>
-                      </div>
-                    </div>
-                    <div class="chaos-xl-error">
-                      <strong>Ошибка сверки</strong>
-                      <span>Цифры в Sheets и ЛК не сходятся</span>
-                    </div>
-                  </div>
-                  <div class="chaos-xl-tabs">
-                    <span class="is-on">Сверка</span>
-                    <span>ЛК</span>
-                    <span>Сырьё</span>
-                  </div>
-                </div>
+    <main class="site-main">
+    <section class="site-scene" id="top">
+      <div class="stage" data-stage data-pane="home-hero" data-od-id="lab-flow-hero">
+    <div class="stage__glow stage__glow--hub"></div>
+    <div class="stage__glow stage__glow--table"></div>
+    <div class="stage__grain" aria-hidden="true"></div>
 
-                <!-- Sheets поверх -->
-                <div class="chaos-win chaos-win--sheets">
-                  <div class="chaos-chrome">
-                    <span class="chaos-dots"></span>
-                    <span class="chaos-chrome-title">Сводка_WB_v7 — Sheets</span>
-                  </div>
-                  <div class="chaos-sheet-bar">
-                    <span>Файл</span><span>Данные</span><span>Фильтр ×6</span>
-                  </div>
-                  <div class="chaos-pane chaos-pane--sheet">
-                    <div class="chaos-sheet-grid">
-                      <b></b><b></b><b></b><b></b><b></b>
-                      <b></b><b></b><b></b><b></b><b></b>
-                      <b></b><b></b><b></b><b></b><b></b>
-                    </div>
-                  </div>
-                  <div class="chaos-sheet-tabs">
-                    <span class="is-on">Июль</span>
-                    <span>Июнь</span>
-                    <span>SKU</span>
-                    <span>Рекл</span>
-                  </div>
-                </div>
+    <svg class="wires" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g-wb" x1="450" y1="208" x2="710" y2="308" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#ff9adf"/>
+          <stop offset="40%" stop-color="#ff4eb8"/>
+          <stop offset="100%" stop-color="#cb11ab"/>
+        </linearGradient>
+        <linearGradient id="g-oz" x1="960" y1="208" x2="710" y2="308" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#9ec8ff"/>
+          <stop offset="40%" stop-color="#4da3ff"/>
+          <stop offset="100%" stop-color="#005bff"/>
+        </linearGradient>
+        <linearGradient id="g-mint" x1="711" y1="347" x2="711" y2="376" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#b8ffe8"/>
+          <stop offset="100%" stop-color="#5dffc8"/>
+        </linearGradient>
+        <filter id="neon-wb" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="3.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="neon-oz" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="3.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="neon-mint" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.8" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="halo" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="6.5" result="b"/>
+          <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0"/>
+        </filter>
+        <filter id="dot-glow" x="-120%" y="-120%" width="340%" height="340%">
+          <feGaussianBlur stdDeviation="1.8" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <radialGradient id="dot-wb"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#ffd0f2"/><stop offset="100%" stop-color="#cb11ab"/></radialGradient>
+        <radialGradient id="dot-oz"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#cfe4ff"/><stop offset="100%" stop-color="#3d9bff"/></radialGradient>
+        <radialGradient id="dot-mint"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#d4fff3"/><stop offset="100%" stop-color="#5dffc8"/></radialGradient>
+      </defs>
 
-                <!-- PDF -->
-                <div class="chaos-win chaos-win--pdf">
-                  <div class="chaos-chrome">
-                    <span class="chaos-file-badge chaos-file-badge--pdf">PDF</span>
-                    <span class="chaos-chrome-title">сверка_KPI.pdf</span>
-                  </div>
-                  <div class="chaos-pane chaos-pane--pdf">
-                    <div class="chaos-pdf-page">
-                      <em></em><em></em><em></em>
-                      <div class="chaos-pdf-chart"></div>
-                    </div>
-                  </div>
-                </div>
+      <g class="wires__halo" data-wires-halo filter="url(#halo)" opacity="0.5"></g>
+      <g class="wires__neon" stroke-linecap="round">
+        <g data-wires-neon="wb" filter="url(#neon-wb)"></g>
+        <g data-wires-neon="oz" filter="url(#neon-oz)"></g>
+        <g data-wires-neon="mint" filter="url(#neon-mint)"></g>
+      </g>
+      <g class="wires__core" data-wires-core stroke-linecap="round"></g>
+      <g data-particles></g>
+    </svg>
 
-                <!-- Проводник + ПКМ меню «Копировать» -->
-                <div class="chaos-win chaos-win--explorer">
-                  <div class="chaos-chrome">
-                    <span class="chaos-dots"></span>
-                    <span class="chaos-chrome-title">Отчёты · 128 файлов</span>
-                  </div>
-                  <div class="chaos-pane chaos-pane--files">
-                    <ul class="chaos-files">
-                      <li class="is-dir">Q2_архив</li>
-                      <li class="is-xls is-selected">остатки_финал.xlsx</li>
-                      <li class="is-xls">остатки_финал(1).xlsx</li>
-                      <li class="is-csv">выгрузка_CSV.csv</li>
-                      <li class="is-xls is-pain">дубль_цифр.xlsx</li>
-                      <li class="is-dir">реклама_сырьё</li>
-                    </ul>
-                    <div class="chaos-ctx">
-                      <span>Открыть</span>
-                      <span class="is-hover">Копировать</span>
-                      <span>Вставить</span>
-                      <span class="is-sep">Удалить</span>
-                      <span class="chaos-cursor" aria-hidden="true"></span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Окно с графиком -->
-                <div class="chaos-win chaos-win--chart">
-                  <div class="chaos-chrome">
-                    <span class="chaos-dots"></span>
-                    <span class="chaos-chrome-title">Продажи · график</span>
-                  </div>
-                  <div class="chaos-pane chaos-pane--chart">
-                    <svg class="chaos-line-chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
-                      <polyline points="0,30 14,26 28,28 42,18 56,22 70,12 84,16 100,8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                    </svg>
-                    <div class="chaos-chart-legend">
-                      <span></span><span></span><span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Окно с диаграммой -->
-                <div class="chaos-win chaos-win--donut">
-                  <div class="chaos-chrome">
-                    <span class="chaos-dots"></span>
-                    <span class="chaos-chrome-title">Доли · категории</span>
-                  </div>
-                  <div class="chaos-pane chaos-pane--donut">
-                    <svg class="chaos-donut" viewBox="0 0 36 36" aria-hidden="true">
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="5" />
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="#6b8a9e" stroke-width="5" stroke-dasharray="40 88" stroke-dashoffset="0" transform="rotate(-90 18 18)" />
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="#8b6b7a" stroke-width="5" stroke-dasharray="28 100" stroke-dashoffset="-40" transform="rotate(-90 18 18)" />
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="#7a8b6b" stroke-width="5" stroke-dasharray="20 100" stroke-dashoffset="-68" transform="rotate(-90 18 18)" />
-                    </svg>
-                    <div class="chaos-bars">
-                      <i style="--h:70%"></i>
-                      <i style="--h:45%"></i>
-                      <i style="--h:85%"></i>
-                      <i style="--h:35%"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="relief-order" id="reliefOrder" aria-hidden="true">
-              <div class="order-panel">
-                <div class="order-prompt">
-                  <img
-                    class="order-prompt-logo"
-                    src="/assets/brand/logo-neon.svg"
-                    alt=""
-                    width="22"
-                    height="22"
-                    decoding="async"
-                  />
-                  <p class="order-prompt-label">
-                    <span class="order-prompt-brand">NeedRa:&nbsp;</span>
-                    <span class="order-prompt-text">Что для меня важно сегодня?</span>
-                  </p>
-                </div>
-
-                <div class="order-blocks">
-                  <div class="order-block">
-                    <p class="order-block-title">Категории</p>
-                    <table class="order-table">
-                      <tbody>
-                        <tr><td>Платья</td><td class="is-up">+12%</td></tr>
-                        <tr><td>Топы</td><td class="is-up">+8%</td></tr>
-                        <tr><td>Сумки</td><td class="is-down">−3%</td></tr>
-                        <tr><td>Обувь</td><td class="is-up">+5%</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class="order-block">
-                    <p class="order-block-title">Метрики</p>
-                    <div class="order-kpis">
-                      <div class="order-kpi">
-                        <span class="order-kpi-label">ROI</span>
-                        <span class="order-kpi-val">98%</span>
-                      </div>
-                      <div class="order-kpi">
-                        <span class="order-kpi-label">ДРР</span>
-                        <span class="order-kpi-val">6%</span>
-                      </div>
-                      <div class="order-kpi">
-                        <span class="order-kpi-label">CTR</span>
-                        <span class="order-kpi-val">3,8%</span>
-                      </div>
-                      <div class="order-kpi">
-                        <span class="order-kpi-label">Выкупы</span>
-                        <span class="order-kpi-val">82%</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="order-block order-block--chart">
-                    <p class="order-block-title">Продажи · неделя</p>
-                    <svg class="order-chart" viewBox="0 0 120 48" preserveAspectRatio="none" aria-hidden="true">
-                      <polyline
-                        class="order-chart-line"
-                        points="0,36 20,32 40,34 60,22 80,26 100,14 120,10"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.75"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <polyline
-                        class="order-chart-area"
-                        points="0,48 0,36 20,32 40,34 60,22 80,26 100,14 120,10 120,48"
-                        stroke="none"
-                      />
-                    </svg>
-                    <div class="order-chart-days">
-                      <span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="relief-divider" id="reliefDivider" aria-hidden="true"></div>
+    <article class="win win--wb" data-od-id="lab-flow-wb">
+      <span class="win__tag"><img src="/assets/brand/logo-wb.svg" alt=""></span>
+      <div class="win__body">
+        <aside class="win__side">
+          <span class="win__brand"><img src="/assets/brand/logo-wb.svg" alt=""></span>
+          <span class="ico" data-ico="home"></span>
+          <span class="ico" data-ico="tag"></span>
+          <span class="ico ico--on" data-ico="globe"></span>
+          <span class="ico" data-ico="list"></span>
+          <span class="ico" data-ico="line"></span>
+          <span class="ico" data-ico="pie"></span>
+          <span class="ico" data-ico="gear"></span>
+        </aside>
+        <div class="win__main">
+          <div class="win__top">
+            <div class="win__search"><span class="ico" data-ico="search"></span></div>
+            <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
           </div>
-          <label class="relief-slider-wrap" for="reliefSlider" data-od-id="relief-slider">
-            <span class="relief-slider-label">хаос</span>
-            <input type="range" id="reliefSlider" class="relief-slider" min="0" max="100" value="40" aria-label="Сдвинуть границу между хаосом и NeedRa" />
-            <span class="relief-slider-label">NeedRa</span>
-          </label>
+          <div class="win__filters" data-win-filters></div>
+          <div class="win__list" data-win-list></div>
         </div>
       </div>
-    </section>
+    </article>
 
-    <section class="below-section below-section--muted" id="pricing" data-od-id="section-pricing">
-      <div class="grid-12">
-        <div class="pricing-cards col-wide" data-od-id="pricing-cards">
-          <article class="price-card price-card--free" id="priceFree" data-od-id="price-free">
-            <span class="price-badge">Старт</span>
-            <h3>Бесплатно</h3>
-            <p class="price-desc">первая загрузка данных магазина из API + общение с агентом</p>
-            <ul class="price-bullets">
-              <li>подгрузка 1 своего документа</li>
-            </ul>
-          </article>
-          <article class="price-card price-card--paid" id="priceStandard" data-od-id="price-standard">
-            <span class="price-badge">Стандарт</span>
-            <h3><span class="price-amount">5 000 ₽</span><span class="price-period">/мес · магазин</span></h3>
-            <p class="price-desc">ежедневное обновление одного кабинета WB или Ozon</p>
-            <ul class="price-bullets price-bullets--paid">
-              <li>второй магазин — отдельная подписка (WB + Ozon = 5 000 + 5 000 ₽)</li>
-              <li>создание и сохранение своих дашбордов, таблиц и графиков</li>
-              <li>подгрузка 10 своих документов с данными: себестоимость, налоги, прочие индивидуальные метрики</li>
-              <li>глубина хранения — 3 месяца</li>
-            </ul>
-          </article>
-          <article class="price-card price-card--paid" id="pricePro" data-od-id="price-pro">
-            <span class="price-badge">Pro</span>
-            <h3><span class="price-amount">20 000 ₽</span><span class="price-period">/мес · магазин</span></h3>
-            <p class="price-desc">всё из тарифа Стандарт для одного кабинета + расширенные лимиты</p>
-            <ul class="price-bullets price-bullets--paid">
-              <li>подгрузка до 100 своих документов</li>
-              <li>глубина хранения — 1 год</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="below-section below-section--signup" id="signup" data-od-id="section-signup">
-      <div class="grid-12">
-        <div class="signup-wrap col-wide">
-        <div class="signup-stars" aria-hidden="true" data-od-id="signup-stars">
-          <span class="signup-star" data-field="email"></span>
-          <span class="signup-star" data-field="password"></span>
-          <span class="signup-star" data-field="consent"></span>
-        </div>
-        <h2 data-od-id="signup-headline">Зарегистрироваться</h2>
-        <form
-          class="signup-form"
-          id="signupForm"
-          action="https://lk.needra.ru/dev/auth/landing-register"
-          method="post"
-          novalidate
-          data-od-id="signup-form"
-          data-lk-endpoint="https://lk.needra.ru/dev/auth/landing-register"
-        >
-          <label class="field">
-            <span class="field-label">Email <abbr title="обязательно">*</abbr></span>
-            <input type="email" name="email" id="signupEmail" required autocomplete="email" placeholder="you@example.com" data-od-id="signup-email" />
-            <span class="field-error" id="emailError" role="alert"></span>
-          </label>
-          <div class="signup-row">
-            <label class="field">
-              <span class="field-label">Пароль <abbr title="обязательно">*</abbr></span>
-              <input type="password" name="password" id="signupPassword" required autocomplete="new-password" minlength="8" placeholder="Минимум 8 символов" data-od-id="signup-password" />
-              <span class="field-error" id="passwordError" role="alert"></span>
-            </label>
-            <label class="field">
-              <span class="field-label">Подтверждение пароля <abbr title="обязательно">*</abbr></span>
-              <input type="password" name="password_confirmation" id="signupPasswordConfirm" required autocomplete="new-password" minlength="8" placeholder="Повторите пароль" data-od-id="signup-password-confirm" />
-              <span class="field-error" id="passwordConfirmError" role="alert"></span>
-            </label>
+    <article class="win win--oz" data-od-id="lab-flow-ozon">
+      <span class="win__tag"><img src="/assets/brand/logo-ozon.svg" alt=""></span>
+      <div class="win__body">
+        <aside class="win__side">
+          <span class="win__brand"><img src="/assets/brand/logo-ozon.svg" alt=""></span>
+          <span class="ico ico--on" data-ico="home"></span>
+          <span class="ico" data-ico="tag"></span>
+          <span class="ico" data-ico="globe"></span>
+          <span class="ico" data-ico="list"></span>
+          <span class="ico" data-ico="line"></span>
+          <span class="ico" data-ico="pie"></span>
+          <span class="ico" data-ico="gear"></span>
+        </aside>
+        <div class="win__main">
+          <div class="win__top">
+            <div class="win__search"><span class="ico" data-ico="search"></span></div>
+            <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
           </div>
-          <label class="field field-check">
-            <input type="checkbox" name="consent" id="signupConsent" required data-od-id="signup-consent" />
-            <span>Я даю <a href="/legal/personal-data-consent.html" target="_blank" rel="noopener">согласие</a> на обработку персональных данных, включая трансграничную передачу для ИИ-агента. Ознакомлен(а) с <a href="/legal/privacy-policy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a> и <a href="/legal/terms-of-service.html" target="_blank" rel="noopener">Пользовательским соглашением</a> <abbr title="обязательно">*</abbr></span>
-          </label>
-          <button type="submit" class="btn btn-service btn-service--primary btn-lg signup-submit" data-od-id="signup-submit">Зарегистрироваться →</button>
-          <p class="signup-status" id="signupStatus" role="status" aria-live="polite" hidden></p>
-        </form>
-        <p class="signup-note" data-od-id="signup-note">Стандарт 5 000 ₽ · Pro 20 000 ₽/мес за магазин · свой агент · один сервис вместо множества</p>
-        <p class="signup-fallback" data-od-id="signup-fallback">Уже есть аккаунт → <a href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">lk.needra.ru</a></p>
+          <div class="win__filters" data-win-filters></div>
+          <div class="win__list" data-win-list></div>
         </div>
       </div>
-    </section>
+    </article>
 
-    <section class="below-section below-section--muted" id="faq" data-od-id="section-faq">
-      <div class="grid-12">
-        <div class="col-wide">
-        <h2>Частые вопросы</h2>
-        <label class="faq-search-wrap" for="faqSearch">
-          <span class="faq-search-prefix">&gt; поиск</span>
-          <input type="search" id="faqSearch" class="faq-search" placeholder="фильтр вопросов..." autocomplete="off" data-od-id="faq-search" />
-        </label>
-        <div class="faq-terminal" id="faqList" data-od-id="faq-list">
-          <details class="faq-item" data-od-id="faq-data">
-            <summary><span class="faq-prompt">&gt;</span> Откуда данные?</summary>
-            <p><span class="faq-reply">↳</span> API Wildberries и Ozon, ваши собственные данные. Хранение в NeedRa.</p>
-          </details>
-          <details class="faq-item" data-od-id="faq-update">
-            <summary><span class="faq-prompt">&gt;</span> Обновление каждый день?</summary>
-            <p><span class="faq-reply">↳</span> Первая загрузка магазина бесплатна. Автообновление — Стандарт 5 000 ₽ или Pro 20 000 ₽ в месяц за каждый магазин. WB + Ozon на Стандарте — 5 000 + 5 000 ₽.</p>
-          </details>
-          <details class="faq-item" data-od-id="faq-agent">
-            <summary><span class="faq-prompt">&gt;</span> Свой агент?</summary>
-            <p><span class="faq-reply">↳</span> Да, поверх ваших данных WB и Ozon.</p>
-          </details>
-          <details class="faq-item" data-od-id="faq-replace">
-            <summary><span class="faq-prompt">&gt;</span> Заменяет ЛК WB или Ozon?</summary>
-            <p><span class="faq-reply">↳</span> Нет. Слой аналитики через диалог.</p>
-          </details>
-          <details class="faq-item" data-od-id="faq-record">
-            <summary><span class="faq-prompt">&gt;</span> Есть ли запись?</summary>
-            <p><span class="faq-reply">↳</span> Пока нет. Будем аккуратно внедрять по мере развития проекта.</p>
-          </details>
-        </div>
-        </div>
+    <div class="hub" data-od-id="lab-flow-hub">
+      <div class="hub__mark">
+        <img src="/assets/brand/logo-mark.svg" alt="">
       </div>
-    </section>
-
-  </main>
-
-  <footer class="footer" data-od-id="site-footer">
-    <div class="grid-12 footer-inner">
-      <span class="col-span-4">© NeedRa</span>
-      <div class="col-span-4 footer-legal">
-        <a href="/legal/privacy-policy.html">Конфиденциальность</a>
-        <a href="/legal/terms-of-service.html">Соглашение</a>
-        <a href="/legal/public-offer.html">Оферта</a>
-        <a href="/legal/cookie-policy.html">Cookie</a>
+      <div class="hub__core">
+        <span class="hub__brand">NeedRa:</span>
+        <span class="hub__prompt">Спроси что угодно...</span>
+        <span class="hub__cursor" aria-hidden="true"></span>
       </div>
-      <div class="col-span-4 footer-contacts">
-        <a class="footer-tg" href="https://t.me/NeedRabot?start=landing" target="_blank" rel="noopener noreferrer" data-od-id="footer-tg" aria-label="Свяжитесь с нами в Telegram">
-          <span class="footer-tg-label">Свяжитесь с нами</span>
-          <svg class="footer-tg-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-            <path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-          </svg>
-        </a>
-      </div>
+      <span class="hub__go" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 17 L17 7 M10 7 H17 V14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
     </div>
-  </footer>
 
-  <a class="sticky-cta btn btn-service btn-service--primary" href="#signup" id="stickyCta" data-od-id="sticky-cta">Зарегистрироваться</a>
+    <article class="board" data-od-id="lab-flow-board">
+      <div class="board__head">
+        <span class="board__stub"></span>
+        <span class="board__ico" data-ico="cube"></span>
+        <span class="board__ico" data-ico="tag"></span>
+        <span class="board__ico" data-ico="star"></span>
+        <span class="board__ico" data-ico="cart"></span>
+        <span class="board__ico" data-ico="chart"></span>
+        <span class="board__ico" data-ico="clock"></span>
+        <span class="board__ico" data-ico="mark"></span>
+      </div>
+      <div class="board__row board__row--wb">
+        <span class="board__mp"><img src="/assets/brand/logo-wb.svg" alt=""></span>
+        <span class="pill" style="--w:72%"></span>
+        <span class="pill" style="--w:48%"></span>
+        <span class="pill" style="--w:64%"></span>
+        <span class="pill" style="--w:40%"></span>
+        <span class="pill" style="--w:70%"></span>
+        <span class="pill" style="--w:44%"></span>
+        <span class="pill" style="--w:58%"></span>
+      </div>
+      <div class="board__row board__row--wb">
+        <span class="board__mp"></span>
+        <span class="pill" style="--w:54%"></span>
+        <span class="pill" style="--w:66%"></span>
+        <span class="pill" style="--w:38%"></span>
+        <span class="pill" style="--w:62%"></span>
+        <span class="pill" style="--w:50%"></span>
+        <span class="pill" style="--w:74%"></span>
+        <span class="pill" style="--w:46%"></span>
+      </div>
+      <div class="board__row board__row--oz">
+        <span class="board__mp"><img src="/assets/brand/logo-ozon.svg" alt=""></span>
+        <span class="pill" style="--w:68%"></span>
+        <span class="pill" style="--w:42%"></span>
+        <span class="pill" style="--w:56%"></span>
+        <span class="pill" style="--w:74%"></span>
+        <span class="pill" style="--w:36%"></span>
+        <span class="pill" style="--w:60%"></span>
+        <span class="pill" style="--w:52%"></span>
+      </div>
+      <div class="board__row board__row--oz">
+        <span class="board__mp"></span>
+        <span class="pill" style="--w:44%"></span>
+        <span class="pill" style="--w:70%"></span>
+        <span class="pill" style="--w:50%"></span>
+        <span class="pill" style="--w:58%"></span>
+        <span class="pill" style="--w:64%"></span>
+        <span class="pill" style="--w:40%"></span>
+        <span class="pill" style="--w:72%"></span>
+      </div>
+    </article>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="landing-hero-rng.js"></script>
-  <script src="landing-hero-stars.js?v=no-canvas-hole"></script>
-  <script src="landing-hero-v3.1-widgets.js"></script>
-  <script src="landing-hero-backdrop.js?v=horizon-fade"></script>
-  <script src="landing-v3-main.js?v=horizon-fade"></script>
-  <script src="landing-below.js?v=ads-goals"></script>
+    <div class="hero-copy" data-od-id="lab-hero-copy">
+      <h1>Аналитика кабинета ВБ и Озон</h1>
+      <p class="hero-copy__lead">NeedRa считает ваш кабинет Вайлдберриз или Озон. Спросите в чате — таблица, график или дашборд. Данные кабинета и ваших файлов.</p>
+      <div class="hero-copy__actions">
+        <a class="hero-copy__go" href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">В личный кабинет</a>
+        <a class="hero-copy__how" href="#how">Как это работает</a>
+      </div>
+      <p class="hero-copy__micro">Бесплатная регистрация · кабинет ВБ или Озон · чат</p>
+    </div>
+  </div>
+    </section>
+
+    <section class="site-scene" id="how">
+      <div class="stage stage--video" data-pane="home-video" data-od-id="lab-video">
+        <div class="vid" data-video>
+          <div class="vid__copy">
+            <h2>Видео демонстрация работы интерфейса</h2>
+            <p>Как задать вопрос, получить таблицу или график и сохранить отчёт в Excel</p>
+            <div class="vid__think" data-vid-think aria-live="polite">
+              <div class="vid__think-row is-done">
+                <i class="vid__think-dot" aria-hidden="true"></i>
+                <span class="vid__think-copy">Думаю...</span>
+              </div>
+              <div class="vid__think-row is-done is-mint">
+                <i class="vid__think-dot" aria-hidden="true"></i>
+                <span class="vid__think-copy">Готовлю запрос...</span>
+              </div>
+              <div class="vid__think-row is-on">
+                <i class="vid__think-dot" aria-hidden="true"></i>
+                <span class="vid__think-copy">Разбираюсь с вопросом...<em>Уточняю по результатам проверки</em></span>
+              </div>
+              <div class="vid__think-row">
+                <i class="vid__think-dot" aria-hidden="true"></i>
+                <span class="vid__think-copy">Уточняю расчёты...</span>
+              </div>
+              <div class="vid__think-row">
+                <i class="vid__think-dot" aria-hidden="true"></i>
+                <span class="vid__think-copy">Считаю результат...</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vid__player" data-od-id="lab-video-player">
+            <header class="vid__bar">
+              <a class="vid__brand" href="/">
+                <img src="/assets/brand/logo-mark.svg" alt="">
+                <span>NeedRa</span>
+              </a>
+              <nav class="vid__nav" aria-label="Кластеры">
+                <a href="/analitika-ozon/"><i aria-hidden="true"></i>Аналитика Озон <img src="/assets/brand/logo-ozon.svg" alt=""></a>
+                <a href="/analitika-wb/"><i aria-hidden="true"></i>Аналитика ВБ <img src="/assets/brand/logo-wb.svg" alt=""></a>
+              </nav>
+              <a class="vid__cta" href="https://lk.needra.ru/">В личный кабинет</a>
+            </header>
+            <div class="vid__screen">
+              <video data-vid-el src="/assets/lab/NeedRa_movie.mp4" playsinline preload="none"></video>
+              <img class="vid__poster" data-vid-poster src="/assets/lab/video-poster.png?v=cover1" alt="">
+              <button type="button" class="vid__bigplay" data-vid-play aria-label="Смотреть"></button>
+            </div>
+            <div class="vid__ctrl">
+              <div class="vid__progress" data-vid-progress>
+                <span class="vid__progress-fill" data-vid-fill></span>
+              </div>
+              <div class="vid__tools">
+                <button type="button" class="vid__ico" data-vid-play aria-label="Смотреть">
+                  <svg data-vid-play-ico viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5 L19 12 L8 19 Z"/></svg>
+                </button>
+                <button type="button" class="vid__ico" data-vid-mute aria-label="Звук">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z M16.5 8.5 C18.2 10.2 18.2 13.8 16.5 15.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M18.7 6.3 C21.8 9.4 21.8 14.6 18.7 17.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                </button>
+                <span class="vid__time" data-vid-time>0:00 / 0:00</span>
+                <span class="vid__tools-spacer"></span>
+                <button type="button" class="vid__ico" data-vid-gear aria-label="Настройки">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 3.5 V6.2 M12 17.8 V20.5 M20.5 12 H17.8 M6.2 12 H3.5 M18 6 L16.1 7.9 M7.9 16.1 L6 18 M18 18 L16.1 16.1 M7.9 7.9 L6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                </button>
+                <button type="button" class="vid__ico" data-vid-pip aria-label="Мини-плеер">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="12.2" y="11.2" width="6.6" height="5.4" rx="0.7"/></svg>
+                </button>
+                <button type="button" class="vid__ico" data-vid-full aria-label="На весь экран">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 H4 V8 M16 4 H20 V8 M8 20 H4 V16 M16 20 H20 V16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stage stage--how" data-pane="home-how" data-od-id="lab-how">
+        <svg class="wires" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="how-g-mint" x1="720" y1="179" x2="720" y2="216" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#b8ffe8"/>
+              <stop offset="100%" stop-color="#5dffc8"/>
+            </linearGradient>
+            <filter id="how-neon-mint" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="how-halo" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="6.5" result="b"/>
+              <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0"/>
+            </filter>
+            <filter id="how-dot-glow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="1.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <radialGradient id="how-dot-mint"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#d4fff3"/><stop offset="100%" stop-color="#5dffc8"/></radialGradient>
+          </defs>
+          <g class="wires__halo" data-how-wires-halo filter="url(#how-halo)" opacity="0.5"></g>
+          <g class="wires__neon" stroke-linecap="round">
+            <g data-how-wires-neon="mint" filter="url(#how-neon-mint)"></g>
+          </g>
+          <g class="wires__core" data-how-wires-core stroke-linecap="round"></g>
+          <g data-how-particles></g>
+        </svg>
+        <div class="how" data-how data-step="table">
+          <div class="how__play">
+            <div class="how__ask how-glass" data-od-id="lab-how-ask">
+              <div class="how__ask-row">
+                <span class="how__mark"><img src="/assets/brand/logo-mark.svg" alt=""></span>
+                <span class="how__ask-text">Собери отчёт по продажам с разбивкой по категориям</span>
+                <span class="how__go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 L17 7 M10 7 H17 V14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="how__switch" role="tablist" aria-label="Таблица, график или дашборд">
+                <button type="button" class="is-on" role="tab" aria-selected="true" data-how-step="table">Таблица</button>
+                <button type="button" role="tab" aria-selected="false" data-how-step="chart">График</button>
+                <button type="button" role="tab" aria-selected="false" data-how-step="dash">Дашборд</button>
+              </div>
+            </div>
+
+            <div class="how__flow">
+              <div class="how__views how-glass" data-od-id="lab-how-view">
+                <div class="how__view is-on" data-how-view="table">
+                  <div class="how-board">
+                    <div class="how-board__head">
+                      <span></span>
+                      <span class="board__ico" data-ico="cube"></span>
+                      <span class="board__ico" data-ico="tag"></span>
+                      <span class="board__ico" data-ico="star"></span>
+                      <span class="board__ico" data-ico="cart"></span>
+                      <span class="board__ico" data-ico="chart"></span>
+                      <span class="board__ico" data-ico="clock"></span>
+                      <span class="board__ico" data-ico="mark"></span>
+                    </div>
+                    <div class="how-board__row how-board__row--wb">
+                      <span class="board__mp"><img src="/assets/brand/logo-wb.svg" alt=""></span>
+                      <span class="pill" style="--w:72%"></span>
+                      <span class="pill" style="--w:48%"></span>
+                      <span class="pill" style="--w:64%"></span>
+                      <span class="pill" style="--w:40%"></span>
+                      <span class="pill" style="--w:70%"></span>
+                      <span class="pill" style="--w:44%"></span>
+                      <span class="pill" style="--w:58%"></span>
+                    </div>
+                    <div class="how-board__row how-board__row--oz">
+                      <span class="board__mp"><img src="/assets/brand/logo-ozon.svg" alt=""></span>
+                      <span class="pill" style="--w:68%"></span>
+                      <span class="pill" style="--w:42%"></span>
+                      <span class="pill" style="--w:56%"></span>
+                      <span class="pill" style="--w:74%"></span>
+                      <span class="pill" style="--w:36%"></span>
+                      <span class="pill" style="--w:60%"></span>
+                      <span class="pill" style="--w:52%"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="how__view" data-how-view="chart">
+                  <div class="how-chart-wrap">
+                    <span class="how-chart-legend" aria-hidden="true"><i class="is-mint"></i><i class="is-oz"></i></span>
+                    <svg class="how-chart" viewBox="0 0 320 140" fill="none" aria-hidden="true">
+                      <path class="how-chart__grid" d="M16 28 H304 M16 56 H304 M16 84 H304 M16 112 H304 M80 16 V124 M160 16 V124 M240 16 V124"/>
+                      <path class="how-chart__oz" d="M20 108 L70 88 L120 94 L170 62 L220 70 L300 48"/>
+                      <path class="how-chart__mint" d="M20 92 L70 58 L120 70 L170 36 L220 44 L300 22"/>
+                      <g class="how-chart__dots how-chart__dots--oz">
+                        <circle cx="20" cy="108" r="3.2"/><circle cx="70" cy="88" r="3.2"/><circle cx="120" cy="94" r="3.2"/><circle cx="170" cy="62" r="3.2"/><circle cx="220" cy="70" r="3.2"/><circle cx="300" cy="48" r="3.2"/>
+                      </g>
+                      <g class="how-chart__dots how-chart__dots--mint">
+                        <circle cx="20" cy="92" r="3.2"/><circle cx="70" cy="58" r="3.2"/><circle cx="120" cy="70" r="3.2"/><circle cx="170" cy="36" r="3.2"/><circle cx="220" cy="44" r="3.2"/><circle cx="300" cy="22" r="3.2"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="how__view" data-how-view="dash">
+                  <div class="how-dash" data-how-dash>
+                    <div class="how-dash__cell">
+                      <div class="how-dash__donut">
+                        <svg viewBox="0 0 72 72" aria-hidden="true">
+                          <circle cx="36" cy="36" r="24" pathLength="100"/>
+                          <circle class="how-dash__arc" cx="36" cy="36" r="24" pathLength="100"/>
+                        </svg>
+                        <span class="how-dash__legend">
+                          <span><i></i><b style="--w:72%"></b></span>
+                          <span><i></i><b style="--w:48%"></b></span>
+                          <span><i></i><b style="--w:60%"></b></span>
+                          <span><i></i><b style="--w:36%"></b></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="how-dash__cell">
+                      <div class="how-dash__h">
+                        <span class="how-dash__labels"><i style="--w:42%"></i><i style="--w:28%"></i></span>
+                        <span class="how-dash__track" style="--w:82%"></span>
+                        <span class="how-dash__track" style="--w:54%"></span>
+                        <span class="how-dash__track" style="--w:70%"></span>
+                      </div>
+                    </div>
+                    <div class="how-dash__cell">
+                      <div class="how-dash__bars">
+                        <span class="how-dash__labels"><i style="--w:38%"></i><i style="--w:24%"></i></span>
+                        <span class="how-dash__v">
+                          <i style="--h:32%"></i><i style="--h:44%"></i><i style="--h:38%"></i>
+                          <i style="--h:58%"></i><i style="--h:72%"></i><i style="--h:64%"></i>
+                          <i style="--h:88%"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="how-dash__cell">
+                      <div class="how-dash__list">
+                        <span><i class="is-mint"></i><b style="--w:78%"></b><b style="--w:46%"></b></span>
+                        <span><i class="is-wb"></i><b style="--w:64%"></b><b style="--w:38%"></b></span>
+                        <span><i class="is-oz"></i><b style="--w:70%"></b><b style="--w:42%"></b></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="how__foot">
+              <a class="how-btn how-glass" href="/assets/lab/NeedRa.xlsx" download="NeedRa.xlsx" data-how-xls>
+                <span class="board__ico" data-ico="xls"></span>
+                <span class="how-btn__txt">В Excel</span>
+              </a>
+              <button type="button" class="how-btn how-glass" data-how-save>
+                <span class="board__ico" data-ico="mark"></span>
+                <span class="how-btn__txt">Сохранить маску</span>
+              </button>
+              <div class="how-mask how-glass" data-how-mask>
+                <span class="how-mask__ico" aria-hidden="true"><i></i></span>
+                <span class="how-mask__copy">
+                  <b>Маска отчёта</b>
+                  <em><span class="board__ico" data-ico="check"></span> Сохранено</em>
+                </span>
+                <span class="board__ico how-mask__flag" data-ico="mark"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="how__copy">
+            <h2>Как получить отчёт по кабинету ВБ и Озон</h2>
+            <p>Один вопрос в чате. Таблица, график или дашборд. Если нужно — сохраните в Excel. Маску отчёта можно сохранить и открыть снова.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-scene" id="ask">
+      <div class="stage stage--ask" data-pane="home-ask" data-od-id="lab-ask">
+        <svg class="wires" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="ask-g-mint" x1="508" y1="295" x2="508" y2="345" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#b8ffe8"/>
+              <stop offset="100%" stop-color="#5dffc8"/>
+            </linearGradient>
+            <filter id="ask-neon-mint" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="576">
+              <feGaussianBlur stdDeviation="1.6" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="ask-halo" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="576">
+              <feGaussianBlur stdDeviation="3.2" result="b"/>
+              <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.45 0"/>
+            </filter>
+            <filter id="ask-dot-glow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="1.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <radialGradient id="ask-dot-mint"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#d4fff3"/><stop offset="100%" stop-color="#5dffc8"/></radialGradient>
+          </defs>
+          <g class="wires__halo" data-ask-wires-halo filter="url(#ask-halo)" opacity="0.32"></g>
+          <g class="wires__neon" stroke-linecap="round">
+            <g data-ask-wires-neon="mint" filter="url(#ask-neon-mint)"></g>
+          </g>
+          <g class="wires__core" data-ask-wires-core stroke-linecap="round"></g>
+          <g data-ask-nodes></g>
+          <g data-ask-particles></g>
+        </svg>
+        <div class="ask" data-ask>
+          <header class="ask__copy">
+            <h2>Сервис аналитики кабинета ВБ и Озон</h2>
+            <p>Спросите юнит, прибыль, отчёт или продажи. Ответ из API и ваших файлов, не чужой дашборд и не калькулятор без данных магазина.</p>
+          </header>
+          <div class="ask__hub ask-glass" data-od-id="lab-ask-hub">
+            <span class="ask__lock">
+              <span class="ask__mark"><img src="/assets/brand/logo-mark.svg" alt=""></span>
+              <span class="ask__hub-name">NeedRa</span>
+            </span>
+          </div>
+          <article class="ask__card ask-glass" data-ask-card="l1" data-od-id="lab-ask-l1">
+            <div class="ask__body">
+              <span class="ask__tag ask__tag--oz">OZON</span>
+              <h3>Юнит-экономика Озон</h3>
+              <p>Маржа, ДРР, себестоимость — из кабинета Озон и ваших файлов. Не калькулятор без данных магазина. Подробнее: <a href="/analitika-ozon/">аналитика Озон</a>.</p>
+            </div>
+            <span class="ask__ico" data-ico="pie"></span>
+          </article>
+          <article class="ask__card ask-glass" data-ask-card="l2" data-od-id="lab-ask-l2">
+            <div class="ask__body">
+              <span class="ask__tag ask__tag--wb">WB</span>
+              <h3>Юнит-экономика ВБ</h3>
+              <p>Себестоимость и маржа SKU — из кабинета Вайлдберриз и файлов, что загрузите. Подробнее: <a href="/analitika-wb/">аналитика ВБ</a>.</p>
+            </div>
+            <span class="ask__ico" data-ico="cube"></span>
+          </article>
+          <article class="ask__card ask-glass" data-ask-card="l3" data-od-id="lab-ask-l3">
+            <div class="ask__body">
+              <span class="ask__tag ask__tag--wb">WB</span>
+              <h3>Прибыль Вайлдберриз</h3>
+              <p>По артикулу или за день, из API Wildberries и ваших файлов. Рост прибыли не обещаем. Подробнее: <a href="/analitika-wb/">аналитика ВБ</a>.</p>
+            </div>
+            <span class="ask__ico" data-ico="line"></span>
+          </article>
+          <article class="ask__card ask-glass" data-ask-card="r1" data-od-id="lab-ask-r1">
+            <div class="ask__body">
+              <span class="ask__tag ask__tag--oz">OZON</span>
+              <h3>Прибыль Озон</h3>
+              <p>Спросите прибыль за день или по SKU. Цифры из кабинета Озон. Рост не обещаем. Подробнее: <a href="/analitika-ozon/">аналитика Озон</a>.</p>
+            </div>
+            <span class="ask__ico" data-ico="chart"></span>
+          </article>
+          <article class="ask__card ask-glass" data-ask-card="r2" data-od-id="lab-ask-r2">
+            <div class="ask__body">
+              <span class="ask__tag ask__tag--oz">OZON</span>
+              <h3>Отчёты Озон</h3>
+              <p>Вид под вопрос: продажи, заказы, FBO, поставки — если поле есть в API или в файле. Маска. Скачать в Excel. Подробнее: <a href="/analitika-ozon/">аналитика Озон</a>.</p>
+            </div>
+            <span class="ask__ico" data-ico="doc"></span>
+          </article>
+          <article class="ask__card ask-glass" data-ask-card="r3" data-od-id="lab-ask-r3">
+            <div class="ask__body">
+              <span class="ask__tag ask__tag--wb">WB</span>
+              <h3>Отчёты Вайлдберриз</h3>
+              <p>Продажи, остатки, реклама — если поле есть в API или в файле. Маска. Скачать в Excel. Подробнее: <a href="/analitika-wb/">аналитика ВБ</a>.</p>
+            </div>
+            <span class="ask__ico" data-ico="grid"></span>
+          </article>
+        </div>
+        <svg class="wires wires--nodes" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <defs>
+            <filter id="ask-node-glow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="1.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <radialGradient id="ask-node-mint"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#d4fff3"/><stop offset="100%" stop-color="#5dffc8"/></radialGradient>
+          </defs>
+        </svg>
+      </div>
+    </section>
+
+    <section class="site-scene" id="usp">
+      <div class="stage stage--usp" data-pane="home-usp" data-od-id="lab-usp">
+        <svg class="wires" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="usp-g-wb" x1="576" y1="160" x2="649" y2="289" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ff9adf"/>
+              <stop offset="100%" stop-color="#cb11ab"/>
+            </linearGradient>
+            <linearGradient id="usp-g-oz" x1="866" y1="160" x2="794" y2="289" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#9ec8ff"/>
+              <stop offset="100%" stop-color="#005bff"/>
+            </linearGradient>
+            <filter id="usp-neon-wb" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="usp-neon-oz" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="usp-halo" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="4.2" result="b"/>
+              <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0"/>
+            </filter>
+            <filter id="usp-dot-glow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="1.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <radialGradient id="usp-dot-wb"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#ffd0f2"/><stop offset="100%" stop-color="#cb11ab"/></radialGradient>
+            <radialGradient id="usp-dot-oz"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#cfe4ff"/><stop offset="100%" stop-color="#3d9bff"/></radialGradient>
+          </defs>
+          <g class="wires__halo" data-usp-wires-halo filter="url(#usp-halo)" opacity="0.4"></g>
+          <g class="wires__neon" stroke-linecap="round">
+            <g data-usp-wires-neon="wb" filter="url(#usp-neon-wb)"></g>
+            <g data-usp-wires-neon="oz" filter="url(#usp-neon-oz)"></g>
+          </g>
+          <g class="wires__core" data-usp-wires-core stroke-linecap="round"></g>
+          <g data-usp-particles></g>
+        </svg>
+        <div class="usp" data-usp>
+          <header class="usp__copy">
+            <h2>Один отчёт ВБ и Озон — в одной таблице</h2>
+            <p>Редкий сервис сводит аналитику двух кабинетов в одном месте. Спросили выручку за день — колонки ВБ, Озон, сумма. Прибыль, юнит, остатки — так же. Два кабинета = две подписки.</p>
+          </header>
+          <div class="usp__cab usp-glass usp__cab--wb" data-od-id="lab-usp-wb">
+            <span class="ask__tag ask__tag--wb">WB</span>
+            <img class="usp__key" src="/assets/lab/usp-key-icon.png" alt="" aria-hidden="true">
+          </div>
+          <div class="usp__cab usp-glass usp__cab--oz" data-od-id="lab-usp-oz">
+            <span class="ask__tag ask__tag--oz">OZON</span>
+            <span class="usp__key" aria-hidden="true"></span>
+          </div>
+          <article class="usp__table" data-od-id="lab-usp-table">
+            <div class="usp__board usp-glass">
+              <div class="usp-board">
+                <div class="usp-board__head">
+                  <span>ВБ</span>
+                  <span>Озон</span>
+                  <span>Сумма</span>
+                </div>
+                <div class="usp-board__row">
+                  <span class="pill" style="--w:78%"></span>
+                  <span class="pill" style="--w:62%"></span>
+                  <span class="pill" style="--w:86%"></span>
+                </div>
+                <div class="usp-board__row">
+                  <span class="pill" style="--w:54%"></span>
+                  <span class="pill" style="--w:70%"></span>
+                  <span class="pill" style="--w:72%"></span>
+                </div>
+                <div class="usp-board__row">
+                  <span class="pill" style="--w:66%"></span>
+                  <span class="pill" style="--w:48%"></span>
+                  <span class="pill" style="--w:80%"></span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <svg class="wires wires--nodes" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <g data-usp-nodes></g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="site-scene" id="pricing">
+      <div class="stage stage--price" data-pane="home-price" data-od-id="lab-price">
+        <svg class="wires" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="price-g-mint" x1="315" y1="270" x2="379" y2="198" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#b8ffe8"/>
+              <stop offset="100%" stop-color="#5dffc8"/>
+            </linearGradient>
+            <linearGradient id="price-g-wb" x1="635" y1="198" x2="688" y2="198" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ff9adf"/>
+              <stop offset="100%" stop-color="#cb11ab"/>
+            </linearGradient>
+            <linearGradient id="price-g-oz" x1="635" y1="300" x2="688" y2="300" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#9ec8ff"/>
+              <stop offset="100%" stop-color="#005bff"/>
+            </linearGradient>
+            <filter id="price-neon-mint" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="price-neon-wb" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="price-neon-oz" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="price-halo" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="4.2" result="b"/>
+              <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0"/>
+            </filter>
+            <filter id="price-dot-glow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="1.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <radialGradient id="price-dot-mint"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#d4fff3"/><stop offset="100%" stop-color="#5dffc8"/></radialGradient>
+            <radialGradient id="price-dot-wb"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#ffd0f2"/><stop offset="100%" stop-color="#cb11ab"/></radialGradient>
+            <radialGradient id="price-dot-oz"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#cfe4ff"/><stop offset="100%" stop-color="#3d9bff"/></radialGradient>
+          </defs>
+          <g class="wires__halo" data-price-wires-halo filter="url(#price-halo)" opacity="0.4"></g>
+          <g class="wires__neon" stroke-linecap="round">
+            <g data-price-wires-neon="mint" filter="url(#price-neon-mint)"></g>
+            <g data-price-wires-neon="wb" filter="url(#price-neon-wb)"></g>
+            <g data-price-wires-neon="oz" filter="url(#price-neon-oz)"></g>
+          </g>
+          <g class="wires__core" data-price-wires-core stroke-linecap="round"></g>
+          <g data-price-particles></g>
+        </svg>
+        <div class="price" data-price>
+          <header class="price__copy">
+            <h2>Один тариф — один кабинет ВБ или Озон</h2>
+            <p class="price__lead">Стандарт 5 000 ₽, Pro 20 000 ₽/мес за магазин. ВБ + Озон = две подписки. Общий отчёт — если оба подключены.</p>
+          </header>
+          <div class="price__plans" data-od-id="lab-price-plans">
+            <div class="price-plan-frame" data-price-frame aria-hidden="true"></div>
+            <article class="price-plan" data-price="0">
+              <span class="price-plan__ico price-plan__ico--rocket" aria-hidden="true"></span>
+              <span class="price-plan__badge">Старт</span>
+              <div class="price-plan__copy">
+                <h3>Бесплатно</h3>
+                <p>первая загрузка данных магазина из API + общение с агентом</p>
+                <ul>
+                  <li>подгрузка 1 своего документа</li>
+                </ul>
+              </div>
+            </article>
+            <article class="price-plan is-on" data-price="5000">
+              <span class="price-plan__ico price-plan__ico--medal" aria-hidden="true"></span>
+              <span class="price-plan__badge">Стандарт</span>
+              <div class="price-plan__copy">
+                <h3>5 000 ₽/мес</h3>
+                <p>ежедневное обновление одного кабинета WB или Ozon</p>
+                <ul>
+                  <li>создание и сохранение своих дашбордов, таблиц и графиков</li>
+                  <li>подгрузка 10 документов</li>
+                  <li>глубина хранения — 3 месяца</li>
+                </ul>
+              </div>
+            </article>
+            <article class="price-plan" data-price="20000">
+              <span class="price-plan__ico price-plan__ico--diamond" aria-hidden="true"></span>
+              <span class="price-plan__badge">Pro</span>
+              <div class="price-plan__copy">
+                <h3>20 000 ₽/мес</h3>
+                <p>всё из тарифа Стандарт для одного кабинета + расширенные лимиты</p>
+                <ul>
+                  <li>подгрузка до 100 своих документов</li>
+                  <li>глубина хранения — 1 год</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="price__markets" data-od-id="lab-price-markets">
+            <button class="price-mp price-glass is-on" type="button" data-shop="wb" aria-pressed="true">
+              <span class="ask__tag ask__tag--wb">WB</span>
+              <span class="price-mp__name">Wildberries</span>
+              <span class="price-mp__tick" data-ico="check" aria-hidden="true"></span>
+              <span class="price-mp__radio" data-ico="radio" aria-hidden="true"></span>
+            </button>
+            <button class="price-mp price-glass" type="button" data-shop="oz" aria-pressed="false">
+              <span class="ask__tag ask__tag--oz">OZON</span>
+              <span class="price-mp__name">Ozon</span>
+              <span class="price-mp__tick" data-ico="check" aria-hidden="true"></span>
+              <span class="price-mp__radio" data-ico="radio" aria-hidden="true"></span>
+            </button>
+            <button class="price-mp price-mp--add" type="button">
+              <svg class="price-mp__add-frame" aria-hidden="true">
+                <rect />
+              </svg>
+              <span class="price-mp__plus" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18.4"
+                    stroke="currentColor" stroke-width="1.35" stroke-linecap="round"
+                    stroke-dasharray="7.7 3.9"/>
+                  <path d="M20 12.2 V27.8 M12.2 20 H27.8"
+                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="price-mp__soon">
+                <span class="ask__tag ask__tag--ym" aria-hidden="true">
+                  <img src="/assets/lab/logo-ym.png" alt="">
+                </span>
+                <span class="price-mp__name">Яндекс маркет (скоро)</span>
+              </span>
+            </button>
+          </div>
+          <article class="price__board price-glass" data-od-id="lab-price-board">
+            <div class="price-calc" data-price-calc>
+              <ul class="price-calc__lines">
+                <li class="price-calc__line is-on" data-calc-line="wb">
+                  <span class="price-calc__op" aria-hidden="true"></span>
+                  <span class="ask__tag ask__tag--wb">WB</span>
+                  <span class="price-calc__addend" data-calc-addend>5 000 ₽</span>
+                </li>
+                <li class="price-calc__line" data-calc-line="oz">
+                  <span class="price-calc__op" data-calc-plus aria-hidden="true">+</span>
+                  <span class="ask__tag ask__tag--oz">OZON</span>
+                  <span class="price-calc__addend" data-calc-addend>—</span>
+                </li>
+              </ul>
+              <p class="price-calc__sum" aria-live="polite">
+                <strong data-calc-total>5 000 ₽</strong>
+                <span data-calc-unit>/мес</span>
+              </p>
+              <p class="price-calc__note" data-calc-note>ежедневное обновление кабинета WB</p>
+            </div>
+            <div class="price-row is-on" data-feat="dashboards">
+              <span class="price-row__ico" data-ico="trend" aria-hidden="true"></span>
+              <span class="price-row__feat">создание и сохранение своих дашбордов, таблиц и графиков</span>
+              <span class="price-row__dot"></span>
+            </div>
+            <div class="price-row is-on" data-feat="docs">
+              <span class="price-row__ico" data-ico="xls" aria-hidden="true"></span>
+              <span class="price-row__feat" data-feat-copy>подгрузка 10 документов</span>
+              <span class="price-row__dot"></span>
+            </div>
+            <div class="price-row is-on" data-feat="store">
+              <span class="price-row__ico" data-ico="db" aria-hidden="true"></span>
+              <span class="price-row__feat" data-feat-copy>глубина хранения — 3 месяца</span>
+              <span class="price-row__dot"></span>
+            </div>
+          </article>
+        </div>
+        <svg class="wires wires--nodes" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <g data-price-nodes></g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="site-scene" id="signup">
+      <div class="stage stage--signup" data-pane="home-signup" data-od-id="lab-signup">
+        <svg class="wires" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="signup-g-mint" x1="510" y1="78" x2="640" y2="220" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#b8ffe8"/>
+              <stop offset="100%" stop-color="#5dffc8"/>
+            </linearGradient>
+            <filter id="signup-neon-mint" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="signup-halo" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="4.2" result="b"/>
+              <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0"/>
+            </filter>
+            <filter id="signup-dot-glow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="1.8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <radialGradient id="signup-dot-mint"><stop offset="0%" stop-color="#fff"/><stop offset="45%" stop-color="#d4fff3"/><stop offset="100%" stop-color="#5dffc8"/></radialGradient>
+            <marker id="signup-arrow" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="4" refY="4" orient="auto">
+              <path d="M 0.6 0.8 L 7.4 4 L 0.6 7.2 Z" fill="#5dffc8"/>
+            </marker>
+          </defs>
+          <g class="wires__halo" data-signup-wires-halo filter="url(#signup-halo)" opacity="0.4"></g>
+          <g class="wires__neon" stroke-linecap="round">
+            <g data-signup-wires-neon="mint" filter="url(#signup-neon-mint)"></g>
+          </g>
+          <g class="wires__core" data-signup-wires-core stroke-linecap="round"></g>
+          <g data-signup-particles></g>
+        </svg>
+        <div class="signup" data-signup>
+          <header class="signup__copy">
+            <h2>Регистрация: аналитика ВБ и Озон бесплатно</h2>
+            <p>Первая загрузка из API бесплатна. Ежедневное обновление — в Стандарте и Pro.</p>
+          </header>
+          <svg class="signup__deco" viewBox="0 0 100 240" aria-hidden="true">
+            <defs>
+              <filter id="signup-deco-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="1.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <path class="signup__deco-frame" d="M8 112 L8 22 A14 14 0 0 1 22 8 L78 8 A14 14 0 0 1 92 22 L92 218 A14 14 0 0 1 78 232 L22 232 A14 14 0 0 1 8 218 L8 128"/>
+            <g class="signup__deco-body" filter="url(#signup-deco-glow)">
+              <polygon points="50,20 74,34 74,60 50,74 26,60 26,34"/>
+              <text x="50" y="51" text-anchor="middle">API</text>
+              <line class="signup__deco-line" x1="50" y1="74" x2="50" y2="109"/>
+              <circle data-signup-deco-hub cx="50" cy="120" r="5.2"/>
+              <line class="signup__deco-line" x1="50" y1="131" x2="50" y2="164"/>
+              <ellipse cx="50" cy="176" rx="20" ry="8"/>
+              <path d="M30 176 V204"/>
+              <path d="M70 176 V204"/>
+              <path d="M30 185.3 A20 8 0 0 0 70 185.3"/>
+              <path d="M30 194.7 A20 8 0 0 0 70 194.7"/>
+              <path d="M30 204 A20 8 0 0 0 70 204"/>
+            </g>
+          </svg>
+          <span class="signup__hint" data-signup-hint="user" role="status"></span>
+          <span class="signup__hint" data-signup-hint="shield" role="status"></span>
+          <span class="signup__node" data-signup-node="user" data-ico="user" aria-hidden="true"></span>
+          <span class="signup__node" data-signup-node="shield" data-ico="shield" aria-hidden="true"></span>
+          <span class="signup__node" data-signup-node="cloud" data-ico="cloud" aria-hidden="true"></span>
+          <form class="signup__card price-glass" data-od-id="lab-signup-form" data-signup-form action="https://lk.needra.ru/dev/auth/landing-register" method="post" novalidate data-lk-endpoint="https://lk.needra.ru/dev/auth/landing-register">
+            <label class="signup__field">
+              <span>Email *</span>
+              <input data-signup-port="email" type="email" name="email" autocomplete="email" required placeholder="you@example.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Введите адрес почты" inputmode="email">
+            </label>
+            <div class="signup__field">
+              <label for="signup-password">Пароль *</label>
+              <span class="signup__pass">
+                <input id="signup-password" data-signup-port="password" type="password" name="password" minlength="8" autocomplete="new-password" required placeholder="Минимум 8 символов">
+                <button class="signup__eye" type="button" data-signup-eye aria-pressed="false" aria-label="Показать пароль" onclick="needraToggleSignupEye(this)">
+                  <span class="signup__eye-on" data-ico="eye" aria-hidden="true"></span>
+                  <span class="signup__eye-off" data-ico="eye-off" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+            <div class="signup__field">
+              <label for="signup-password-confirm">Подтверждение пароля *</label>
+              <span class="signup__pass">
+                <input id="signup-password-confirm" data-signup-port="confirm" type="password" name="password_confirmation" minlength="8" autocomplete="new-password" required placeholder="Повторите пароль">
+                <button class="signup__eye" type="button" data-signup-eye aria-pressed="false" aria-label="Показать пароль" onclick="needraToggleSignupEye(this)">
+                  <span class="signup__eye-on" data-ico="eye" aria-hidden="true"></span>
+                  <span class="signup__eye-off" data-ico="eye-off" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+            <label class="signup__check">
+              <input type="checkbox" name="consent" required>
+              <span>Я даю <a href="https://needra.ru/legal/personal-data-consent.html" target="_blank" rel="noopener noreferrer">согласие</a> на обработку персональных данных и ознакомлен(а) с <a href="https://needra.ru/legal/privacy-policy.html" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a> и <a href="https://needra.ru/legal/terms-of-service.html" target="_blank" rel="noopener noreferrer">Пользовательским соглашением</a>.</span>
+            </label>
+            <div class="signup__foot">
+              <button class="signup__go" type="submit">Зарегистрироваться</button>
+              <p class="signup__status" data-signup-status hidden role="status"></p>
+              <p class="signup__fallback">Уже есть аккаунт → <a href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">lk.needra.ru</a></p>
+            </div>
+          </form>
+          <svg class="signup__stepper" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="signup-edge-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#5dffc8" stop-opacity="0"/>
+                <stop offset="40%" stop-color="#5dffc8" stop-opacity="0.28"/>
+                <stop offset="50%" stop-color="#5dffc8" stop-opacity="0.62"/>
+                <stop offset="60%" stop-color="#5dffc8" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#5dffc8" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="signup-rail-0" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#d6deda" stop-opacity="0"/>
+                <stop offset="0.1" stop-color="#d6deda" stop-opacity="0"/>
+                <stop offset="0.22" stop-color="#d6deda" stop-opacity="0.62"/>
+                <stop offset="0.78" stop-color="#d6deda" stop-opacity="0.62"/>
+                <stop offset="0.9" stop-color="#d6deda" stop-opacity="0"/>
+                <stop offset="1" stop-color="#d6deda" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="signup-rail-1" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#d6deda" stop-opacity="0"/>
+                <stop offset="0.1" stop-color="#d6deda" stop-opacity="0"/>
+                <stop offset="0.22" stop-color="#d6deda" stop-opacity="0.62"/>
+                <stop offset="0.78" stop-color="#d6deda" stop-opacity="0.62"/>
+                <stop offset="0.9" stop-color="#d6deda" stop-opacity="0"/>
+                <stop offset="1" stop-color="#d6deda" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <g data-signup-stepper></g>
+          </svg>
+        </div>
+        <svg class="wires wires--nodes" viewBox="0 0 1024 576" fill="none" aria-hidden="true">
+          <g data-signup-port-dots></g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="site-scene" id="faq">
+      <div class="stage stage--faq" data-pane="home-faq" data-od-id="lab-faq">
+        <div class="stage__grain" aria-hidden="true"></div>
+        <div class="faq" data-faq>
+          <header class="faq__copy">
+            <h2>Частые вопросы по аналитике ВБ и Озон</h2>
+          </header>
+          <div class="faq__term" data-od-id="lab-faq-term">
+            <div class="faq__bar">
+              <span class="faq__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="faq__bar-title">needra — faq</span>
+              <span class="faq__pager" data-faq-pager>01 / 08</span>
+            </div>
+            <div class="faq__list" data-faq-list>
+              <article class="faq__row is-on" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="true">
+                  <span class="faq__num">01</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Можно ли купить подписку сразу на год?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Да, внутри кабинета вы можете пополнить баланс на любой период. Средства будут автоматически списываться каждый месяц из вашего баланса в личном кабинете (не с карты)</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">02</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Можно ли анализировать данные, загруженные на бесплатном тарифе, несколько дней?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Да. Бесплатно — первая загрузка из API и чат по этому срезу. Свежие данные каждый день — в тарифах Стандарт и Pro</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">03</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Можно ли купить подписку PRO на OZON и Стандарт на WB?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Да. Один тариф — один кабинет. ВБ и Озон — две подписки, уровни можно разные</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">04</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Как связаться с технической поддержкой?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Через наш телеграм бот: <a class="faq__link" href="https://t.me/NeedRabot" target="_blank" rel="noopener noreferrer">https://t.me/NeedRabot</a> в любой момент</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">05</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Какие API ключи нужны для сервиса и где их взять?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Ключ API на чтение: в кабинете продавца Wildberries и/или Ozon, раздел API</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">06</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Если я дам API на запись, сервис сможет записать мои задачи в кабинет?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Нет. Нужен ключ на чтение. Возможно позже</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">07</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Смогу ли я подключить к сервису своего агента и обучить его?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Нет. В чате агент NeedRa по данным вашего кабинета. Своего агента подключить нельзя</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+              <article class="faq__row" data-faq-row>
+                <button class="faq__cmd" type="button" aria-expanded="false">
+                  <span class="faq__num">08</span>
+                  <span class="faq__gt">&gt;</span>
+                  <h3>Могу ли я получить доступ к аналитике Яндекс Маркета через ваш сервис?</h3>
+                </button>
+                <p class="faq__out"><span data-faq-typed>Пока нет. Сейчас ВБ и Озон. Яндекс Маркет — скоро</span><span class="faq__cursor" aria-hidden="true"></span></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-scene">
+      <div class="stage stage--foot" data-pane="home-foot" data-od-id="lab-foot">
+        <div class="stage__grain" aria-hidden="true"></div>
+        <footer class="foot" data-od-id="lab-foot-panel">
+          <svg class="foot__wires" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" aria-hidden="true" data-foot-svg>
+            <defs>
+              <mask id="foot-join-mask" maskUnits="userSpaceOnUse">
+                <rect data-foot-mask-bg fill="#fff"/>
+                <g data-foot-mask-holes></g>
+              </mask>
+              <mask id="foot-halo-mask" maskUnits="userSpaceOnUse">
+                <rect data-foot-halo-bg fill="#fff"/>
+                <g data-foot-halo-holes></g>
+              </mask>
+            </defs>
+            <g mask="url(#foot-halo-mask)">
+              <g class="wires__halo" data-foot-halo opacity="0.4"></g>
+            </g>
+            <g class="wires__neon" data-foot-neon stroke-linecap="butt" mask="url(#foot-join-mask)"></g>
+            <g data-foot-nodes></g>
+          </svg>
+          <div class="foot__mark"><img src="/assets/brand/logo-mark.svg" alt=""></div>
+          <span class="foot__copy">© NeedRa</span>
+          <i class="foot__port foot__hub" data-foot-hub></i>
+          <div class="foot__group" data-foot-row>
+            <a class="foot__link foot__link--privacy" href="https://needra.ru/legal/privacy-policy.html" target="_blank" rel="noopener noreferrer"><i class="foot__port" data-foot-port></i>Конфиденциальность</a>
+            <a class="foot__link foot__link--terms" href="https://needra.ru/legal/terms-of-service.html" target="_blank" rel="noopener noreferrer"><i class="foot__port" data-foot-port></i>Соглашение</a>
+            <a class="foot__link foot__link--offer" href="https://needra.ru/legal/public-offer.html" target="_blank" rel="noopener noreferrer"><i class="foot__port" data-foot-port></i>Оферта</a>
+            <a class="foot__link foot__link--cookie" href="https://needra.ru/legal/cookie-policy.html" target="_blank" rel="noopener noreferrer"><i class="foot__port" data-foot-port></i>Cookie</a>
+            <span class="foot__more foot__more--legal" aria-hidden="true"><i class="foot__port" data-foot-port></i></span>
+          </div>
+          <div class="foot__group" data-foot-row>
+            <a class="foot__link foot__link--both" href="/"><i class="foot__port" data-foot-port></i>Аналитика ВБ и Озон</a>
+            <a class="foot__link foot__link--oz" href="/analitika-ozon/"><i class="foot__port" data-foot-port></i>Аналитика Озон <img class="foot__mp" src="/assets/brand/logo-ozon.svg" alt=""></a>
+            <a class="foot__link foot__link--wb" href="/analitika-wb/"><i class="foot__port" data-foot-port></i>Аналитика ВБ <img class="foot__mp" src="/assets/brand/logo-wb.svg" alt=""></a>
+            <span class="foot__more foot__more--svc" aria-hidden="true"><i class="foot__port" data-foot-port></i></span>
+          </div>
+          <div class="foot__group" data-foot-row>
+            <a class="foot__btn foot__btn--ghost" href="https://t.me/NeedRabot?start=landing" target="_blank" rel="noopener noreferrer">
+              <i class="foot__port foot__port--in" data-foot-port></i>
+              <span class="foot__ico" data-ico="send" aria-hidden="true"></span>
+              Свяжитесь с нами
+              <i class="foot__port foot__port--out" data-foot-port></i>
+            </a>
+            <a class="foot__btn foot__btn--go" href="https://lk.needra.ru/" target="_blank" rel="noopener noreferrer">
+              <i class="foot__port foot__port--in" data-foot-port></i>
+              В личный кабинет
+              <span class="foot__arrow" aria-hidden="true">→</span>
+              <i class="foot__port foot__port--out" data-foot-port></i>
+            </a>
+            <span class="foot__more foot__more--cta" aria-hidden="true"><i class="foot__port" data-foot-port></i></span>
+          </div>
+        </footer>
+      </div>
+    </section>
+    </main>
+  </div>
+
+  <svg class="ico-sprite" aria-hidden="true">
+    <symbol id="ico-home" viewBox="0 0 24 24"><path d="M4 11.5 L12 5 l8 6.5 V20 H15 V14 H9 v6 H4 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16 L20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ico-cube" viewBox="0 0 24 24"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z M12 3 V21 M4 7.5 L12 12 L20 7.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-chart" viewBox="0 0 24 24"><path d="M4 18 V8 M10 18 V5 M16 18 V11 M22 18 H3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ico-box" viewBox="0 0 24 24"><path d="M4 8 L12 4 L20 8 V16 L12 20 L4 16 Z M4 8 L12 12 L20 8 M12 12 V20" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="ico-tag" viewBox="0 0 24 24"><path d="M3 12 L12 3 H20 V11 L11 20 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="16.2" cy="7.8" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="ico-dots" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="ico-star" viewBox="0 0 24 24"><path d="M12 3.5 L14.4 9.2 L20.5 9.6 L16 13.7 L17.5 19.6 L12 16.6 L6.5 19.6 L8 13.7 L3.5 9.6 L9.6 9.2 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-cart" viewBox="0 0 24 24"><path d="M3 5 H6 L8 15 H18 L20 8 H7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.4" fill="currentColor"/><circle cx="17" cy="19" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="ico-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8 V12.5 L15 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ico-mark" viewBox="0 0 24 24"><path d="M7 4 H17 V20 L12 16.2 L7 20 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-xls" viewBox="0 0 24 24">
+      <path d="M8 3.2 H15.5 L20 7.8 V20.8 H8 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <rect x="2.6" y="7.6" width="12.2" height="12.2" rx="1.6" fill="currentColor"/>
+      <path d="M5.4 10.2 L12 16.8 M12 10.2 L5.4 16.8" fill="none" stroke="#04140f" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8 12.2 L11 15.4 L16.6 9.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ico-radio" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="ico-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 12 H20 M12 4 C 16 8 16 16 12 20 C 8 16 8 8 12 4" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="ico-list" viewBox="0 0 24 24"><path d="M8 7 H19 M8 12 H19 M8 17 H19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="7" r="1.1" fill="currentColor"/><circle cx="5" cy="12" r="1.1" fill="currentColor"/><circle cx="5" cy="17" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="ico-line" viewBox="0 0 24 24"><path d="M4 16 L9 11 L13 14 L20 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19 H20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="ico-trend" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M12.00 3.00 A 9.0 9.0 0 0 1 15.66 20.22 L 13.87 16.20 A 4.6 4.6 0 0 0 12.00 7.40 Z"/>
+        <path opacity="0.55" d="M13.25 20.91 A 9.0 9.0 0 0 1 3.00 11.71 L 7.40 11.85 A 4.6 4.6 0 0 0 12.64 16.56 Z"/>
+        <path opacity="0.34" d="M3.43 9.24 A 9.0 9.0 0 0 1 9.52 3.35 L 10.73 7.58 A 4.6 4.6 0 0 0 7.62 10.59 Z"/>
+      </g>
+    </symbol>
+    <symbol id="ico-pie" viewBox="0 0 24 24"><path d="M12 4 A8 8 0 1 1 4 12 H12 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-doc" viewBox="0 0 24 24"><path d="M7 3.5 H14 L19 8.5 V20.5 H7 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 3.5 V8.5 H19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 12 H16 M10 15.5 H16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="ico-grid" viewBox="0 0 24 24"><path d="M5 5 H19 V19 H5 Z M5 10 H19 M5 14 H19 M10 5 V19 M14 5 V19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-db" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="6.2" rx="7.2" ry="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M4.8 6.2 V16.6 C4.8 18.1 8 19.4 12 19.4 C16 19.4 19.2 18.1 19.2 16.6 V6.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M4.8 11.2 C4.8 12.7 8 14 12 14 C16 14 19.2 12.7 19.2 11.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="ico-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 5 V3 M12 21 V19 M19 12 H21 M3 12 H5 M17 7 L18.5 5.5 M5.5 18.5 L7 17 M17 17 L18.5 18.5 M5.5 5.5 L7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="ico-rocket" viewBox="0 0 24 24"><path d="M14 4 C 17 4 20 8 20 12 L 14 18 L 6 10 L 12 4 C 12 4 13 4 14 4 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 10 L 4 16 L 10 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="14.2" cy="9.6" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="ico-gem" viewBox="0 0 24 24"><path d="M7 6 H17 L21 11 L12 20 L3 11 Z M3 11 H21 M7 6 L12 20 L17 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-plus" viewBox="0 0 24 24"><path d="M12 5 V19 M5 12 H19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ico-user" viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.2 19.2 C 6.8 14.8 9 13 12 13 C 15 13 17.2 14.8 17.8 19.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ico-shield" viewBox="0 0 24 24"><path d="M12 3.4 L19 6.2 V12.2 C 19 16.4 16.2 19.4 12 20.6 C 7.8 19.4 5 16.4 5 12.2 V6.2 Z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"/><path d="M8.6 12.1 L11 14.5 L15.6 9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-cloud" viewBox="0 0 24 24"><path d="M8.2 17.2 H16.4 C 18.6 17.2 20.2 15.6 20.2 13.6 C 20.2 11.7 18.7 10.2 16.9 10.1 C 16.4 8 14.5 6.4 12.2 6.4 C 9.6 6.4 7.5 8.3 7.2 10.8 C 5.5 11.1 4.2 12.6 4.2 14.3 C 4.2 16.1 5.6 17.2 8.2 17.2 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 15.2 V9.8 M9.6 11.8 L12 9.4 L14.4 11.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ico-eye" viewBox="0 0 24 24"><path d="M3.2 12 C 6.2 7.2 9.4 5.6 12 5.6 C 14.6 5.6 17.8 7.2 20.8 12 C 17.8 16.8 14.6 18.4 12 18.4 C 9.4 18.4 6.2 16.8 3.2 12 Z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.35" fill="none" stroke="currentColor" stroke-width="1.55"/></symbol>
+    <symbol id="ico-eye-off" viewBox="0 0 24 24"><path d="M3.2 12 C 6.2 7.2 9.4 5.6 12 5.6 C 14.6 5.6 17.8 7.2 20.8 12 C 17.8 16.8 14.6 18.4 12 18.4 C 9.4 18.4 6.2 16.8 3.2 12 Z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.35" fill="none" stroke="currentColor" stroke-width="1.55"/><path d="M5 19 L19 5" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/></symbol>
+    <symbol id="ico-send" viewBox="5.4 7 15.8 11.6"><path fill="currentColor" d="M16.906 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
+  </svg>
+
+  <script src="/lab-shared.js?v=site-v2"></script>
+  <script>
+    window.needraToggleSignupEye = window.needraToggleSignupEye || function (btn) {
+      const input = btn.parentElement && btn.parentElement.querySelector("input");
+      if (!input) return;
+      const shown = input.type === "password";
+      input.type = shown ? "text" : "password";
+      btn.classList.toggle("is-on", shown);
+      btn.setAttribute("aria-pressed", shown ? "true" : "false");
+      btn.setAttribute("aria-label", shown ? "Скрыть пароль" : "Показать пароль");
+    };
+  </script>
 </body>
 </html>

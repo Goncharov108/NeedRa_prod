@@ -21,6 +21,14 @@ const REMOVE = [
   "orbit-chips-gallery.js",
   "noise-to-chat.html",
   "index.v1.html",
+  "seo-prototype.html",
+  "seo-prototype.css",
+  "seo-prototype-v0.html",
+  "karkas-home.html",
+  "karkas-ozon.html",
+  "karkas-wb.html",
+  "backup/seo-prototype-v0",
+  "assets/seo-prototype",
   "landing-hero-blackhole.js",
   "landing-hero-orbit-canvas.js",
   "landing-hero-widgets.js",
@@ -56,3 +64,12 @@ console.log(
 if (removed.length) {
   for (const rel of removed) console.log(`  - ${rel}`);
 }
+
+const archiveV1 = path.join(root, "archive", "landing-v1");
+const distV1 = path.join(dist, "landing-v1");
+if (!fs.existsSync(path.join(archiveV1, "index.html"))) {
+  console.error("prune-dist: нет archive/landing-v1/index.html — лендинг v1 не попадёт в dist");
+  process.exit(1);
+}
+fs.cpSync(archiveV1, distV1, { recursive: true });
+console.log("prune-dist: archive/landing-v1 → dist/landing-v1");
