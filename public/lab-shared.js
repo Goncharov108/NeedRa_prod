@@ -1323,6 +1323,43 @@
   }
 
   /**
+   * Visible tariff label: 0 ₽ → Бесплатно, else 5 000 ₽.
+   */
+  function priceLabel(amount) {
+    return amount === 0 ? "Бесплатно" : formatPrice(amount);
+  }
+
+  /**
+   * Active plan: key (start/standard/pro), now price, optional old price for strikethrough.
+   */
+  function planMeta(stageEl) {
+    const plan = stageEl && stageEl.querySelector(".price-plan.is-on");
+    const now = Number(plan?.dataset.price || 0);
+    const wasRaw = plan?.dataset.wasPrice;
+    const was = wasRaw === undefined || wasRaw === "" ? null : Number(wasRaw);
+    const key = plan?.dataset.plan || (now === 0 ? "start" : now === 20000 ? "pro" : "standard");
+    return { plan, key, now, was };
+  }
+
+  /**
+   * Paint a promo cell: optional struck old price + current amount.
+   */
+  function paintPromoAmount(el, now, was) {
+    if (!el) return;
+    el.replaceChildren();
+    if (was != null && was !== now) {
+      const old = document.createElement("s");
+      old.className = "price-promo__was";
+      old.textContent = formatPrice(was);
+      el.append(old);
+    }
+    const cur = document.createElement("span");
+    cur.className = "price-promo__now";
+    cur.textContent = priceLabel(now);
+    el.append(cur);
+  }
+
+  /**
    * Shop names at the end of the board note: WB, Ozon, or both.
    */
   function shopNoteEnding(wb, oz) {
@@ -1332,10 +1369,10 @@
   }
 
   /**
-   * Live board note: one-time API load on Start, daily refresh on paid tariffs.
+   * Live board note: one-time API load on Start, daily refresh on Standard/Pro.
    */
-  function calcNoteText(unit, wbOn, ozOn) {
-    if (unit === 0) return "данные из API загружаются 1 раз";
+  function calcNoteText(key, wbOn, ozOn) {
+    if (key === "start") return "данные из API загружаются 1 раз";
     return `ежедневное обновление кабинета ${shopNoteEnding(wbOn, ozOn)}`;
   }
 
@@ -1345,8 +1382,8 @@
   function syncPriceCalc(stageEl) {
     const root = stageEl && stageEl.querySelector("[data-price-calc]");
     if (!root) return;
-    const unit = Number(stageEl.querySelector(".price-plan.is-on")?.dataset.price || 0);
-    let total = 0;
+    const { key, now, was } = planMeta(stageEl);
+    let shopsOn = 0;
     let wbOn = false;
     let ozOn = false;
     root.querySelectorAll("[data-calc-line]").forEach((line) => {
@@ -1356,25 +1393,27 @@
       line.classList.toggle("is-on", on);
       if (shop === "wb") wbOn = on;
       if (shop === "oz") ozOn = on;
-      if (on) total += unit;
-      if (addend) addend.textContent = on ? formatPrice(unit) : "—";
+      if (on) shopsOn += 1;
+      if (addend) {
+        if (!on) addend.textContent = "—";
+        else paintPromoAmount(addend, now, was);
+      }
     });
     root.classList.toggle("is-both", wbOn && ozOn);
+    const total = now * shopsOn;
+    const wasTotal = was == null ? null : was * shopsOn;
     const totalEl = root.querySelector("[data-calc-total]");
+    const wasEl = root.querySelector("[data-calc-was]");
     const unitEl = root.querySelector("[data-calc-unit]");
     const noteEl = root.querySelector("[data-calc-note]");
-    if (totalEl) {
-      if (total === 0) {
-        totalEl.textContent = "Бесплатно";
-        if (unitEl) unitEl.hidden = true;
-      } else {
-        totalEl.textContent = formatPrice(total);
-        if (unitEl) unitEl.hidden = false;
-      }
+    if (totalEl) totalEl.textContent = priceLabel(total);
+    if (wasEl) {
+      const showWas = wasTotal != null && wasTotal !== total;
+      wasEl.hidden = !showWas;
+      if (showWas) wasEl.textContent = formatPrice(wasTotal);
     }
-    if (noteEl) {
-      noteEl.textContent = calcNoteText(unit, wbOn, ozOn);
-    }
+    if (unitEl) unitEl.hidden = total === 0;
+    if (noteEl) noteEl.textContent = calcNoteText(key, wbOn, ozOn);
   }
 
   /**
@@ -1382,8 +1421,7 @@
    */
   function syncPriceFeats(stageEl) {
     if (!stageEl) return;
-    const price = Number(stageEl.querySelector(".price-plan.is-on")?.dataset.price || 0);
-    const key = price === 0 ? "start" : price === 20000 ? "pro" : "standard";
+    const { key } = planMeta(stageEl);
     const on = {
       start: ["docs"],
       standard: ["dashboards", "docs", "store"],
@@ -1404,7 +1442,7 @@
     if (docsEl) docsEl.textContent = docsCopy;
     if (storeEl) storeEl.textContent = storeCopy;
     stageEl.querySelectorAll("[data-feat]").forEach((row) => {
-      row.classList.toggle("is-on", on.includes(row.dataset.feat));
+      row.classList.toggle("is-on", Boolean(on) && on.includes(row.dataset.feat));
     });
   }
 

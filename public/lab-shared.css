@@ -2640,6 +2640,13 @@ body {
   text-underline-offset: 0.18em;
 }
 
+.price__lead s {
+  color: rgba(210, 226, 220, 0.42);
+  text-decoration: line-through;
+  text-decoration-color: rgba(93, 255, 200, 0.55);
+  text-decoration-thickness: 0.08em;
+}
+
 .price__plans {
   position: absolute;
   left: 3.42%;
@@ -2754,10 +2761,41 @@ body {
 }
 
 .price-plan h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.22em 0.45em;
   margin: 1cqh 0 0;
   font-size: 1.42cqw;
   line-height: 1.15;
   font-weight: 700;
+}
+
+.price-plan__was {
+  color: rgba(210, 226, 220, 0.4);
+  font-size: 0.72em;
+  font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: rgba(93, 255, 200, 0.58);
+  text-decoration-thickness: 0.09em;
+}
+
+.price-plan.is-on .price-plan__now {
+  color: var(--mint);
+}
+
+.price-plan__off {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.16em 0.42em 0.14em;
+  border-radius: 0.32em;
+  background: rgba(93, 255, 200, 0.14);
+  color: var(--mint);
+  font-size: 0.52em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .price-plan p,
@@ -3055,13 +3093,28 @@ body {
 }
 
 .price-calc__addend {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-self: end;
+  gap: 0.12cqh;
   font-size: 1.12cqw;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
   color: rgba(210, 226, 220, 0.55);
   white-space: nowrap;
+  line-height: 1.15;
+}
+
+.price-promo__was {
+  color: rgba(210, 226, 220, 0.4);
+  font-size: 0.78em;
+  font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: rgba(93, 255, 200, 0.5);
+  text-decoration-thickness: 0.08em;
+  text-shadow: none;
 }
 
 .price-calc__line[data-calc-line="wb"].is-on .price-calc__addend {
@@ -3074,6 +3127,11 @@ body {
   text-shadow: 0 0 8px rgba(0, 91, 255, 0.4);
 }
 
+.price-calc__line.is-on .price-promo__was {
+  color: rgba(210, 226, 220, 0.4);
+  text-shadow: none;
+}
+
 .price-calc__sum {
   display: flex;
   align-items: baseline;
@@ -3082,6 +3140,21 @@ body {
   margin: 0;
   padding: 1.1cqh 0 0;
   border-top: 1px solid rgba(93, 255, 200, 0.32);
+}
+
+.price-calc__was {
+  width: 100%;
+  color: rgba(210, 226, 220, 0.38);
+  font-size: 1.2cqw;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: line-through;
+  text-decoration-color: rgba(93, 255, 200, 0.5);
+  text-decoration-thickness: 0.08em;
+}
+
+.price-calc__sum [hidden] {
+  display: none;
 }
 
 .price-calc__sum strong {
@@ -5372,6 +5445,14 @@ body.site .how__go svg {
   body.site .price-plan h3 {
     font-size: 18px;
     margin-top: 8px;
+  }
+
+  body.site .price-plan__off {
+    font-size: 11px;
+  }
+
+  body.site .price-calc__was {
+    font-size: 13px;
   }
 
   body.site .price-plan__ico {

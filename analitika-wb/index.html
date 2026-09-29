@@ -19,7 +19,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.png" type="image/png" sizes="120x120" />
   <link rel="apple-touch-icon" href="/favicon.png" />
-  <link rel="stylesheet" href="/lab-shared.css?v=site-v2">
+  <link rel="stylesheet" href="/lab-shared.css?v=site-v2-promo">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
@@ -447,11 +447,11 @@
         <div class="price" data-price>
           <header class="price__copy">
             <h2>Тариф на кабинет ВБ</h2>
-            <p class="price__lead">Стандарт 5 000 ₽, Pro 20 000 ₽/мес за один кабинет Вайлдберриз. Кабинет Озон — отдельная подписка, тексты на <a href="/#pricing">главной</a>.</p>
+            <p class="price__lead">Стандарт временно <s>5 000 ₽</s> бесплатно, Pro <s>20 000 ₽</s> 5 000 ₽/мес за один кабинет Вайлдберриз. Кабинет Озон — отдельная подписка, тексты на <a href="/#pricing">главной</a>.</p>
           </header>
           <div class="price__plans" data-od-id="lab-wbprice-plans">
             <div class="price-plan-frame" data-price-frame aria-hidden="true"></div>
-            <article class="price-plan" data-price="0">
+            <article class="price-plan" data-plan="start" data-price="0">
               <span class="price-plan__ico price-plan__ico--rocket" aria-hidden="true"></span>
               <span class="price-plan__badge">Старт</span>
               <div class="price-plan__copy">
@@ -462,11 +462,11 @@
                 </ul>
               </div>
             </article>
-            <article class="price-plan is-on" data-price="5000">
+            <article class="price-plan is-on" data-plan="standard" data-price="0" data-was-price="5000">
               <span class="price-plan__ico price-plan__ico--medal" aria-hidden="true"></span>
               <span class="price-plan__badge">Стандарт</span>
               <div class="price-plan__copy">
-                <h3>5 000 ₽/мес</h3>
+                <h3><s class="price-plan__was">5 000 ₽</s> <span class="price-plan__now">Бесплатно</span></h3>
                 <p>ежедневное обновление одного кабинета ВБ</p>
                 <ul>
                   <li>создание и сохранение своих дашбордов, таблиц и графиков</li>
@@ -475,11 +475,11 @@
                 </ul>
               </div>
             </article>
-            <article class="price-plan" data-price="20000">
+            <article class="price-plan" data-plan="pro" data-price="5000" data-was-price="20000">
               <span class="price-plan__ico price-plan__ico--diamond" aria-hidden="true"></span>
               <span class="price-plan__badge">Pro</span>
               <div class="price-plan__copy">
-                <h3>20 000 ₽/мес</h3>
+                <h3><s class="price-plan__was">20 000 ₽</s> <span class="price-plan__now">5 000 ₽/мес</span> <span class="price-plan__off">−75%</span></h3>
                 <p>всё из тарифа Стандарт для одного кабинета + расширенные лимиты</p>
                 <ul>
                   <li>подгрузка до 100 своих документов</li>
@@ -528,7 +528,7 @@
                 <li class="price-calc__line is-on" data-calc-line="wb">
                   <span class="price-calc__op" aria-hidden="true"></span>
                   <span class="ask__tag ask__tag--wb">WB</span>
-                  <span class="price-calc__addend" data-calc-addend>5 000 ₽</span>
+                  <span class="price-calc__addend" data-calc-addend>Бесплатно</span>
                 </li>
                 <li class="price-calc__line" data-calc-line="oz">
                   <span class="price-calc__op" data-calc-plus aria-hidden="true">+</span>
@@ -537,8 +537,9 @@
                 </li>
               </ul>
               <p class="price-calc__sum" aria-live="polite">
-                <strong data-calc-total>5 000 ₽</strong>
-                <span data-calc-unit>/мес</span>
+                <s class="price-calc__was" data-calc-was>5 000 ₽</s>
+                <strong data-calc-total>Бесплатно</strong>
+                <span data-calc-unit hidden>/мес</span>
               </p>
               <p class="price-calc__note" data-calc-note>ежедневное обновление кабинета WB</p>
             </div>
@@ -600,7 +601,7 @@
         <div class="signup" data-signup>
           <header class="signup__copy">
             <h2>Аналитика ВБ бесплатно</h2>
-            <p>Первая загрузка данных из API бесплатна. Ежедневное обновление — в Стандарте и Pro.</p>
+            <p>Стандарт сейчас бесплатно: ежедневное обновление одного кабинета WB. Два кабинета — две подписки.</p>
           </header>
           <svg class="signup__deco" viewBox="0 0 100 240" aria-hidden="true">
             <defs>
@@ -727,7 +728,7 @@
                   <span class="faq__gt">&gt;</span>
                   <h3>Можно ли анализировать данные, загруженные на бесплатном тарифе, несколько дней?</h3>
                 </button>
-                <p class="faq__out"><span data-faq-typed>Да. Бесплатно — первая загрузка из API и чат по этому срезу. Свежие данные каждый день — в тарифах Стандарт и Pro</span><span class="faq__cursor" aria-hidden="true"></span></p>
+                <p class="faq__out"><span data-faq-typed>Да. Стандарт сейчас бесплатно: свежие данные каждый день по одному кабинету, дашборды и чат. Два кабинета — две подписки</span><span class="faq__cursor" aria-hidden="true"></span></p>
               </article>
               <article class="faq__row" data-faq-row>
                 <button class="faq__cmd" type="button" aria-expanded="false">
@@ -895,7 +896,7 @@
     <symbol id="ico-send" viewBox="5.4 7 15.8 11.6"><path fill="currentColor" d="M16.906 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
   </svg>
 
-  <script src="/lab-shared.js?v=site-v2"></script>
+  <script src="/lab-shared.js?v=site-v2-promo"></script>
   <script>
     window.needraToggleSignupEye = window.needraToggleSignupEye || function (btn) {
       const input = btn.parentElement && btn.parentElement.querySelector("input");
