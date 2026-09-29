@@ -7,7 +7,7 @@
 Если `.git` ещё нет:
 
 ```bash
-cd /Users/mac108/Documents/CURSOR/Needra
+cd /Users/mac108/Documents/CURSOR/NeedRa/NeedRa_prod
 git init
 git add .
 git status   # убедиться, что нет .env, ключей, dist/
@@ -21,7 +21,7 @@ EOF
 Remote (когда будет репозиторий на GitHub):
 
 ```bash
-git remote add origin git@github.com:<org-or-user>/needra-landing.git
+git remote add origin https://github.com/Goncharov108/NeedRa_prod.git
 git branch -M main
 git push -u origin main
 ```

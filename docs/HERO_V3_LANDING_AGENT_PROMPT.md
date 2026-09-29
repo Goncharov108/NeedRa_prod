@@ -7,7 +7,7 @@
 ```markdown
 ## Задача
 
-Собери **полный лендинг NeedRa** с hero **v3.1 final** и секциями ниже fold. Репозиторий: `/Users/mac108/Documents/CURSOR/Needra`.
+Собери **полный лендинг NeedRa** с hero **v3.1 final** и секциями ниже fold. Репозиторий: `/Users/mac108/Documents/CURSOR/NeedRa/NeedRa_prod`.
 
 ## Критично — rollback v1
 

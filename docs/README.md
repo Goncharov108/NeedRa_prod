@@ -1,12 +1,13 @@
 # NeedRa — документация проекта
 
-Канон текстов, драматургии и визуала для лендинга сервиса аналитики Wildberries через ИИ-чат.
+Канон текстов, драматургии и визуала для лендинга сервиса аналитики кабинета ВБ и Озон.
 
 ## Статус
 
 | Область | Статус |
 |---------|--------|
-| Продукт | [PRODUCT.md](./PRODUCT.md) — зафиксировано |
+| Продукт | [PRODUCT.md](./PRODUCT.md) |
+| SEO-тексты | [SEO_COPY.md](./SEO_COPY.md) — **канон трёх страниц 19.08.2026** |
 | Драматургия лендинга | [LANDING_DRAMATURGY.md](./LANDING_DRAMATURGY.md) — черновики `[DRAFT]` |
 | Голос бренда | [COPY_VOICE.md](./COPY_VOICE.md) |
 | Визуал | [VISUAL_CONCEPT.md](./VISUAL_CONCEPT.md) |
@@ -20,7 +21,7 @@
 
 ## Аудитория (приоритет)
 
-1. Действующий селлер на WB  
+1. Действующий селлер на WB и/или Ozon  
 2. Менеджер / агентство  
 3. Новичок на WB  
 
@@ -45,6 +46,6 @@
 
 ## Связанные пути
 
-- Репозиторий: `/Users/mac108/Documents/CURSOR/Needra`
+- Репозиторий: `/Users/mac108/Documents/CURSOR/NeedRa/NeedRa_prod`
 - Прод: https://needra.ru
 - OD data: `~/Library/Application Support/Open Design/namespaces/release-stable-intel/data/projects/needra/`

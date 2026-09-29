@@ -16,6 +16,9 @@ backup/
 backup-pre-perf/
 .cursor/
 
+# Зеркало прода (bak), не канон git
+archive/site-v2-*/
+
 # Исходники дизайна / тяжёлые черновики (не прод)
 design/
 

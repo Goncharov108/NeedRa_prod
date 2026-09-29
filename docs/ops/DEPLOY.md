@@ -97,6 +97,8 @@ certbot --nginx -d needra.ru -d www.needra.ru --redirect
 
 Затем с Mac: `npm run deploy`.
 
+SEO-статус и промпт агента Вебмастера: `/Users/mac108/Documents/CURSOR/NeedRa/NeedRa_SEO` (`STATUS.md`, `AGENT_PROMPT.md`).
+
 ## Проверки после деплоя
 
 - [ ] https://needra.ru открывается, title NeedRa
